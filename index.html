@@ -12,754 +12,824 @@
 
 <style>
 :root{
-  --orange:#ff6800;
-  --gold:#f6a400;
-  --black:#090909;
-  --dark:#111;
-  --light:#f7f4ef;
-  --white:#fff;
-  --gray:#777;
-  --green:#25d366;
+--orange:#ff6800;
+--gold:#f6a400;
+--black:#090909;
+--dark:#111;
+--light:#f7f4ef;
+--white:#fff;
+--gray:#777;
+--green:#25d366
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
 
-html{scroll-behavior:smooth}
+html{
+scroll-behavior:smooth
+}
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fff;
-  color:#111;
-  line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:#fff;
+color:#111;
+line-height:1.6
 }
 
-a{text-decoration:none;color:inherit}
+a{
+text-decoration:none;
+color:inherit
+}
 
-button,input,textarea,select{font:inherit}
+button,input,textarea,select{
+font:inherit
+}
 
-img{max-width:100%;display:block}
+img{
+max-width:100%;
+display:block
+}
 
 .container{
-  width:min(1180px,92%);
-  margin:auto;
+width:min(1180px,92%);
+margin:auto
 }
 
 /* TOP */
 .top{
-  background:#050505;
-  color:white;
-  text-align:center;
-  padding:8px;
-  font-size:13px;
+background:#050505;
+color:#fff;
+text-align:center;
+padding:8px;
+font-size:13px
 }
 
-.top b{color:var(--orange)}
+.top b{
+color:var(--orange)
+}
 
 /* HEADER */
 header{
-  background:#080808;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 5px 25px #0004;
+background:#080808;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 5px 25px #0004
 }
 
 .nav{
-  min-height:82px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+min-height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
 }
 
 .logo{
-  width:190px;
-  max-height:68px;
-  object-fit:contain;
+width:190px;
+max-height:68px;
+object-fit:contain
 }
 
 .links{
-  display:flex;
-  align-items:center;
-  gap:22px;
-  color:white;
+display:flex;
+align-items:center;
+gap:22px;
+color:#fff
 }
 
 .links a{
-  font-size:14px;
-  font-weight:bold;
+font-size:14px;
+font-weight:bold
 }
 
-.links a:hover{color:var(--orange)}
+.links a:hover{
+color:var(--orange)
+}
 
 .menu{
-  display:none;
-  background:#222;
-  color:white;
-  border:0;
-  border-radius:10px;
-  padding:10px 14px;
-  font-size:22px;
+display:none;
+background:#222;
+color:#fff;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-size:22px
 }
 
 .lang{
-  background:#222;
-  color:white;
-  border:1px solid #444;
-  border-radius:20px;
-  padding:8px 13px;
-  cursor:pointer;
+background:#222;
+color:#fff;
+border:1px solid #444;
+border-radius:20px;
+padding:8px 13px;
+cursor:pointer
 }
 
 .wa-small{
-  background:var(--orange);
-  color:white!important;
-  padding:11px 16px;
-  border-radius:25px;
+background:var(--orange);
+color:#fff!important;
+padding:11px 16px;
+border-radius:25px
 }
 
 /* HERO */
 .hero{
-  min-height:690px;
-  display:flex;
-  align-items:center;
-  color:white;
-  background:
-    linear-gradient(90deg,#000e 0%,#000b 42%,#0004 100%),
-    url("shop.jpg") center/cover no-repeat;
+min-height:690px;
+display:flex;
+align-items:center;
+color:#fff;
+background:
+linear-gradient(90deg,#000e 0%,#000b 42%,#0004 100%),
+url("shop.jpg") center/cover no-repeat
 }
 
 .hero-content{
-  max-width:720px;
-  padding:90px 0;
-}
-
-.hero-logo{
-  width:min(520px,100%);
-  margin-bottom:25px;
-  border-radius:8px;
+max-width:720px;
+padding:90px 0
 }
 
 .badge{
-  display:inline-block;
-  border:1px solid #ffffff40;
-  background:#ffffff12;
-  padding:8px 15px;
-  border-radius:30px;
-  margin-bottom:22px;
-  font-size:12px;
+display:inline-block;
+border:1px solid #ffffff40;
+background:#ffffff12;
+padding:8px 15px;
+border-radius:30px;
+margin-bottom:22px;
+font-size:12px
 }
 
 .hero h1{
-  font-size:clamp(44px,7vw,76px);
-  line-height:1;
-  letter-spacing:-3px;
-  margin-bottom:22px;
+font-size:clamp(44px,7vw,76px);
+line-height:1;
+letter-spacing:-3px;
+margin-bottom:22px
 }
 
-.hero h1 span{color:var(--orange)}
+.hero h1 span{
+color:var(--orange)
+}
 
 .hero p{
-  font-size:18px;
-  color:#eee;
-  max-width:650px;
-  margin-bottom:28px;
+font-size:18px;
+color:#eee;
+max-width:650px;
+margin-bottom:28px
 }
 
 .buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+display:flex;
+flex-wrap:wrap;
+gap:10px
 }
 
 .btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  border:0;
-  cursor:pointer;
-  padding:14px 20px;
-  border-radius:12px;
-  font-weight:bold;
+display:inline-flex;
+justify-content:center;
+align-items:center;
+border:0;
+cursor:pointer;
+padding:14px 20px;
+border-radius:12px;
+font-weight:bold
 }
 
 .orange{
-  background:var(--orange);
-  color:white;
+background:var(--orange);
+color:#fff
 }
 
 .white{
-  background:white;
-  color:#111;
+background:#fff;
+color:#111
 }
 
 .dark{
-  background:#111;
-  color:white;
+background:#111;
+color:#fff
 }
 
 .btn:hover{
-  transform:translateY(-2px);
+transform:translateY(-2px)
 }
 
 /* STATS */
 .stats{
-  margin-top:-35px;
-  position:relative;
-  z-index:5;
+margin-top:-35px;
+position:relative;
+z-index:5
 }
 
 .stats-box{
-  background:white;
-  border-radius:22px;
-  padding:22px;
-  box-shadow:0 15px 50px #0002;
+background:#fff;
+border-radius:22px;
+padding:22px;
+box-shadow:0 15px 50px #0002
 }
 
 .stats-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
+display:grid;
+grid-template-columns:repeat(4,1fr)
 }
 
 .stat{
-  padding:8px 20px;
-  border-right:1px solid #eee;
+padding:8px 20px;
+border-right:1px solid #eee
 }
 
-.stat:last-child{border:0}
+.stat:last-child{
+border:0
+}
 
 .stat strong{
-  font-size:25px;
+font-size:25px
 }
 
 .stat small{
-  display:block;
-  color:var(--gray);
+display:block;
+color:var(--gray)
 }
 
-/* SECTION */
+/* GENERAL SECTIONS */
 section{
-  padding:90px 0;
+padding:90px 0
 }
 
-.light{background:var(--light)}
+.light{
+background:var(--light)
+}
 
 .section-head{
-  margin-bottom:38px;
+margin-bottom:38px
 }
 
 .eyebrow{
-  color:var(--orange);
-  font-size:12px;
-  font-weight:bold;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:8px;
+color:var(--orange);
+font-size:12px;
+font-weight:bold;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:8px
 }
 
 h2{
-  font-size:clamp(34px,5vw,55px);
-  line-height:1.05;
-  letter-spacing:-2px;
+font-size:clamp(34px,5vw,55px);
+line-height:1.05;
+letter-spacing:-2px
 }
 
 .section-head p{
-  color:var(--gray);
-  max-width:550px;
-  margin-top:12px;
+color:var(--gray);
+max-width:550px;
+margin-top:12px
 }
 
 /* CATEGORIES */
 .categories{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px
 }
 
 .category{
-  min-height:190px;
-  border-radius:22px;
-  background:#111;
-  color:white;
-  padding:25px;
-  display:flex;
-  flex-direction:column;
-  justify-content:end;
-  position:relative;
-  overflow:hidden;
+min-height:190px;
+border-radius:22px;
+background:#111;
+color:#fff;
+padding:25px;
+display:flex;
+flex-direction:column;
+justify-content:end;
+position:relative;
+overflow:hidden
 }
 
 .category:after{
-  content:"";
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  background:var(--orange);
-  position:absolute;
-  right:-70px;
-  top:-70px;
+content:"";
+width:150px;
+height:150px;
+border-radius:50%;
+background:var(--orange);
+position:absolute;
+right:-70px;
+top:-70px
 }
 
 .category h3,
 .category p{
-  position:relative;
-  z-index:2;
+position:relative;
+z-index:2
 }
 
-.category h3{font-size:23px}
+.category h3{
+font-size:23px
+}
 
 .category p{
-  color:#ccc;
-  font-size:13px;
+color:#ccc;
+font-size:13px
 }
 
 /* PRODUCTS */
 .products{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
 }
 
 .product{
-  background:white;
-  border:1px solid #e8e3dd;
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 5px 20px #00000008;
+background:#fff;
+border:1px solid #e8e3dd;
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 5px 20px #00000008
 }
 
 .product-img{
-  height:260px;
-  background:#f1efeb;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow:hidden;
+height:260px;
+background:#f1efeb;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden
 }
 
 .product-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover
 }
 
 .glasses{
-  width:175px;
-  height:72px;
-  border:9px solid #111;
-  border-radius:40px;
+width:175px;
+height:72px;
+border:9px solid #111;
+border-radius:40px
 }
 
-.product-body{padding:20px}
+.product-body{
+padding:20px
+}
 
 .cat{
-  color:var(--orange);
-  font-size:11px;
-  font-weight:bold;
-  text-transform:uppercase;
+color:var(--orange);
+font-size:11px;
+font-weight:bold;
+text-transform:uppercase
 }
 
-.product h3{margin:5px 0}
+.product h3{
+margin:5px 0
+}
 
 .desc{
-  color:#777;
-  font-size:13px;
-  min-height:40px;
+color:#777;
+font-size:13px;
+min-height:40px
 }
 
 .price{
-  font-size:23px;
-  font-weight:bold;
-  margin:12px 0;
+font-size:23px;
+font-weight:bold;
+margin:12px 0
 }
 
 .actions{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px
 }
 
 /* ABOUT */
 .about{
-  background:#0d0d0d;
-  color:white;
+background:#0d0d0d;
+color:#fff
 }
 
 .about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:center
 }
 
 .about-img{
-  min-height:500px;
-  border-radius:28px;
-  background:url("shop.jpg") center/cover no-repeat;
+min-height:500px;
+border-radius:28px;
+background:url("shop.jpg") center/cover no-repeat
 }
 
 .about p{
-  color:#ccc;
-  margin:15px 0;
+color:#ccc;
+margin:15px 0
 }
 
 .check{
-  margin:13px 0;
-  display:flex;
-  gap:10px;
+margin:13px 0;
+display:flex;
+gap:10px
 }
 
-.check b{color:var(--orange)}
+.check b{
+color:var(--orange)
+}
 
 /* SERVICES */
 .services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
 }
 
 .service{
-  background:white;
-  border:1px solid #e8e3dd;
-  border-radius:22px;
-  padding:28px;
+background:#fff;
+border:1px solid #e8e3dd;
+border-radius:22px;
+padding:28px
 }
 
 .service-icon{
-  width:50px;
-  height:50px;
-  background:#fff0e5;
-  color:var(--orange);
-  border-radius:14px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:24px;
-  margin-bottom:18px;
+width:50px;
+height:50px;
+background:#fff0e5;
+color:var(--orange);
+border-radius:14px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+margin-bottom:18px
 }
 
-.service p{color:#777;font-size:14px}
+.service p{
+color:#777;
+font-size:14px
+}
 
 /* SHOP */
 .shop-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px
 }
 
 .shop-card{
-  background:white;
-  border:1px solid #e8e3dd;
-  border-radius:25px;
-  overflow:hidden;
+background:#fff;
+border:1px solid #e8e3dd;
+border-radius:25px;
+overflow:hidden
 }
 
 .shop-photo{
-  height:370px;
-  background:url("shop.jpg") center/cover no-repeat;
+height:370px;
+background:url("shop.jpg") center/cover no-repeat
 }
 
-.shop-info{padding:28px}
+.shop-info{
+padding:28px
+}
 
 .info{
-  display:flex;
-  gap:13px;
-  margin:17px 0;
+display:flex;
+gap:13px;
+margin:17px 0
 }
 
 .icon{
-  width:42px;
-  height:42px;
-  flex:none;
-  border-radius:12px;
-  background:#fff0e5;
-  color:var(--orange);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+width:42px;
+height:42px;
+flex:none;
+border-radius:12px;
+background:#fff0e5;
+color:var(--orange);
+display:flex;
+align-items:center;
+justify-content:center
 }
 
 .info small{
-  display:block;
-  color:#777;
+display:block;
+color:#777
 }
 
 /* QR */
 .qr{
-  background:#0d0d0d;
-  color:white;
-  border-radius:25px;
-  padding:38px;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+background:#0d0d0d;
+color:#fff;
+border-radius:25px;
+padding:38px;
+text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:center
 }
 
-.qr p{color:#aaa}
+.qr p{
+color:#aaa
+}
 
 .qr-box{
-  width:220px;
-  height:220px;
-  background:white;
-  border-radius:15px;
-  padding:15px;
-  margin:25px auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+width:220px;
+height:220px;
+background:#fff;
+border-radius:15px;
+padding:15px;
+margin:25px auto;
+display:flex;
+align-items:center;
+justify-content:center
 }
 
 #qrcode img{
-  width:190px!important;
-  height:190px!important;
+width:190px!important;
+height:190px!important
 }
 
-/* ORDONNANCE */
+/* ORDER */
 .order{
-  background:#fff0e5;
+background:#fff0e5
 }
 
 .order-box{
-  background:white;
-  border-radius:28px;
-  padding:40px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:45px;
+background:#fff;
+border-radius:28px;
+padding:40px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px
 }
 
-.order-box p{color:#777}
+.order-box p{
+color:#777
+}
 
 .form{
-  display:grid;
-  gap:12px;
+display:grid;
+gap:12px
 }
 
-input,textarea{
-  width:100%;
-  padding:14px;
-  border:1px solid #ddd;
-  border-radius:11px;
-  outline:none;
+input,
+textarea{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:11px;
+outline:none
 }
 
 textarea{
-  min-height:120px;
-  resize:vertical;
+min-height:120px;
+resize:vertical
 }
 
 .note{
-  font-size:12px;
-  color:#777;
+font-size:12px;
+color:#777
 }
 
 /* CONTACT */
 .contact-box{
-  background:#111;
-  color:white;
-  border-radius:28px;
-  padding:45px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
+background:#111;
+color:#fff;
+border-radius:28px;
+padding:45px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px
 }
 
 .contact-box p{
-  color:#aaa;
-  margin-top:10px;
+color:#aaa;
+margin-top:10px
 }
 
 /* FOOTER */
 footer{
-  background:#050505;
-  color:white;
-  padding:55px 0 25px;
+background:#050505;
+color:#fff;
+padding:55px 0 25px
 }
 
 .footer-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:40px;
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:40px
 }
 
 .footer-logo{
-  width:230px;
-  max-height:90px;
-  object-fit:contain;
-  margin-bottom:15px;
+width:230px;
+max-height:90px;
+object-fit:contain;
+margin-bottom:15px
 }
 
-footer p,footer a{
-  color:#999;
-  font-size:14px;
-  margin:5px 0;
+footer p,
+footer a{
+color:#999;
+font-size:14px;
+margin:5px 0
 }
 
-footer a:hover{color:var(--orange)}
+footer a:hover{
+color:var(--orange)
+}
 
 .bottom{
-  border-top:1px solid #222;
-  margin-top:35px;
-  padding-top:18px;
-  color:#666;
-  font-size:12px;
+border-top:1px solid #222;
+margin-top:35px;
+padding-top:18px;
+color:#666;
+font-size:12px
 }
 
-/* FLOAT */
+/* FLOATING WHATSAPP */
 .float-wa{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:var(--green);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:26px;
-  z-index:2000;
-  box-shadow:0 10px 30px #0004;
+position:fixed;
+right:18px;
+bottom:18px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:var(--green);
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+z-index:2000;
+box-shadow:0 10px 30px #0004
 }
 
 /* MODAL */
 .modal{
-  position:fixed;
-  inset:0;
-  background:#000b;
-  z-index:5000;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+position:fixed;
+inset:0;
+background:#000b;
+z-index:5000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px
 }
 
-.modal.show{display:flex}
+.modal.show{
+display:flex
+}
 
 .modal-box{
-  background:white;
-  width:min(500px,100%);
-  border-radius:22px;
-  padding:30px;
-  position:relative;
+background:#fff;
+width:min(500px,100%);
+border-radius:22px;
+padding:30px;
+position:relative
 }
 
 .close{
-  position:absolute;
-  right:15px;
-  top:15px;
-  border:0;
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  cursor:pointer;
+position:absolute;
+right:15px;
+top:15px;
+border:0;
+width:38px;
+height:38px;
+border-radius:50%;
+cursor:pointer
+}
+
+/* TABLET */
+@media(max-width:900px){
+
+.links{
+display:none;
+position:absolute;
+top:82px;
+left:0;
+right:0;
+background:#080808;
+padding:20px;
+flex-direction:column
+}
+
+.links.open{
+display:flex
+}
+
+.menu{
+display:block
+}
+
+.categories,
+.products{
+grid-template-columns:1fr 1fr
+}
+
+.about-grid,
+.shop-grid,
+.order-box{
+grid-template-columns:1fr
+}
+
+.services{
+grid-template-columns:1fr
+}
+
+.footer-grid{
+grid-template-columns:1fr
+}
+
+.contact-box{
+display:block
+}
+
+.contact-box .buttons{
+margin-top:20px
+}
+
 }
 
 /* MOBILE */
-@media(max-width:900px){
-
-  .links{
-    display:none;
-    position:absolute;
-    top:82px;
-    left:0;
-    right:0;
-    background:#080808;
-    padding:20px;
-    flex-direction:column;
-  }
-
-  .links.open{display:flex}
-
-  .menu{display:block}
-
-  .categories,
-  .products{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .about-grid,
-  .shop-grid,
-  .order-box{
-    grid-template-columns:1fr;
-  }
-
-  .services{
-    grid-template-columns:1fr;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .contact-box{
-    display:block;
-  }
-
-  .contact-box .buttons{
-    margin-top:20px;
-  }
-}
-
 @media(max-width:560px){
 
-  .logo{width:145px}
+.logo{
+width:145px
+}
 
-  .hero{
-    min-height:680px;
-    background:
-      linear-gradient(90deg,#000e,#0008),
-      url("shop.jpg") center/cover no-repeat;
-  }
+.hero{
+min-height:680px;
+background:
+linear-gradient(90deg,#000e,#0008),
+url("shop.jpg") center/cover no-repeat
+}
 
-  .hero h1{font-size:46px}
+.hero h1{
+font-size:46px
+}
 
-  .hero p{font-size:16px}
+.hero p{
+font-size:16px
+}
 
-  .buttons{
-    flex-direction:column;
-  }
+.buttons{
+flex-direction:column
+}
 
-  .btn{width:100%}
+.btn{
+width:100%
+}
 
-  .stats-grid{
-    grid-template-columns:1fr 1fr;
-  }
+.stats-grid{
+grid-template-columns:1fr 1fr
+}
 
-  .stat{
-    border-bottom:1px solid #eee;
-    border-right:1px solid #eee;
-  }
+.stat{
+border-bottom:1px solid #eee;
+border-right:1px solid #eee
+}
 
-  .categories,
-  .products{
-    grid-template-columns:1fr;
-  }
+.categories,
+.products{
+grid-template-columns:1fr
+}
 
-  section{padding:70px 0}
+section{
+padding:70px 0
+}
 
-  .about-img{min-height:360px}
+.about-img{
+min-height:360px
+}
 
-  .shop-photo{height:280px}
+.shop-photo{
+height:280px
+}
 
-  .order-box{padding:25px}
+.order-box{
+padding:25px
+}
 
-  .contact-box{padding:30px}
+.contact-box{
+padding:30px
+}
 
-  .footer-logo{width:200px}
+.footer-logo{
+width:200px
+}
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- TOP BAR -->
 <div class="top">
-  <b>ESPACE OPTIC</b> • Marrakech • Hay Mabrouka • Opticien Optométriste
+<b>ESPACE OPTIC</b> • Marrakech • Hay Mabrouka • Opticien Optométriste
 </div>
 
+<!-- HEADER -->
 <header>
 <div class="container nav">
 
@@ -785,7 +855,9 @@ footer a:hover{color:var(--orange)}
 
 <a class="wa-small"
 href="https://wa.me/212631420754"
-target="_blank">WhatsApp</a>
+target="_blank">
+WhatsApp
+</a>
 
 </nav>
 
@@ -796,34 +868,35 @@ target="_blank">WhatsApp</a>
 
 <!-- HERO -->
 <section class="hero" id="home">
+
 <div class="container">
+
 <div class="hero-content">
 
 <div class="badge">
 MARRAKECH • HAY MABROUKA
 </div>
 
-<img src="19756.jpg"
-class="hero-logo"
-alt="Espace Optic Marrakech">
-
 <h1>
+
 <span data-fr>Votre vision.</span>
 <span data-ar style="display:none">رؤيتكم.</span>
+
 <br>
+
 <span data-fr>Notre expertise.</span>
 <span data-ar style="display:none">خبرتنا.</span>
+
 </h1>
 
 <p data-fr>
-Lunettes, lentilles, accessoires et conseil
-optique personnalisé dans un espace moderne
-et chaleureux à Marrakech.
+Lunettes, lentilles, accessoires et conseil optique personnalisé
+dans un espace moderne et chaleureux à Marrakech.
 </p>
 
 <p data-ar style="display:none">
-نظارات، عدسات، إكسسوارات واستشارة بصرية
-شخصية في فضاء عصري ومريح بمراكش.
+نظارات، عدسات، إكسسوارات واستشارة بصرية شخصية
+في فضاء عصري ومريح بمراكش.
 </p>
 
 <div class="buttons">
@@ -852,7 +925,9 @@ target="_blank">
 
 <!-- STATS -->
 <div class="container stats">
+
 <div class="stats-box">
+
 <div class="stats-grid">
 
 <div class="stat">
@@ -881,15 +956,24 @@ target="_blank">
 
 <!-- CATEGORIES -->
 <section>
+
 <div class="container">
 
 <div class="section-head">
-<div class="eyebrow">Notre sélection</div>
-<h2>Pour chaque regard.</h2>
+
+<div class="eyebrow">
+Notre sélection
+</div>
+
+<h2>
+Pour chaque regard.
+</h2>
+
 <p>
-Des montures modernes et élégantes
-pour femme, homme et enfant.
+Des montures modernes et élégantes pour femme,
+homme et enfant.
 </p>
+
 </div>
 
 <div class="categories">
@@ -920,15 +1004,24 @@ pour femme, homme et enfant.
 
 <!-- CATALOGUE -->
 <section class="light" id="catalogue">
+
 <div class="container">
 
 <div class="section-head">
-<div class="eyebrow">Catalogue</div>
-<h2>Nos lunettes.</h2>
+
+<div class="eyebrow">
+Catalogue
+</div>
+
+<h2>
+Nos lunettes.
+</h2>
+
 <p>
-Découvrez notre sélection et contactez-nous
-directement pour commander.
+Découvrez notre sélection et contactez-nous directement
+pour commander.
 </p>
+
 </div>
 
 <div class="products" id="products"></div>
@@ -938,726 +1031,28 @@ directement pour commander.
 
 <!-- ABOUT -->
 <section class="about">
+
 <div class="container about-grid">
 
 <div class="about-img"></div>
 
 <div>
 
-<div class="eyebrow">Espace Optic Marrakech</div>
+<div class="eyebrow">
+Espace Optic Marrakech
+</div>
 
 <h2>
 Un espace pensé pour votre confort visuel.
 </h2>
 
 <p>
-Notre boutique vous accueille dans un
-environnement moderne et chaleureux pour
-vous accompagner dans le choix de vos lunettes.
+Notre boutique vous accueille dans un environnement
+moderne et chaleureux pour vous accompagner dans
+le choix de vos lunettes.
 </p>
 
 <div class="check">
-<b>✓</b> Conseil optique personnalisé
+<b>✓</b>
+Conseil optique personnalisé
 </div>
-
-<div class="check">
-<b>✓</b> Lunettes homme, femme et enfant
-</div>
-
-<div class="check">
-<b>✓</b> Lentilles de contact
-</div>
-
-<div class="check">
-<b>✓</b> Commande à distance
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-<div class="container">
-
-<div class="section-head">
-<div class="eyebrow">Nos services</div>
-<h2>Plus qu'une paire.</h2>
-<p>Un accompagnement complet.</p>
-</div>
-
-<div class="services">
-
-<div class="service">
-<div class="service-icon">◉</div>
-<h3>Conseil optique</h3>
-<p>
-Choix de la monture adaptée à votre visage
-et à vos besoins.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">⌁</div>
-<h3>Lentilles</h3>
-<p>
-Solutions de lentilles pour votre confort
-visuel quotidien.
-</p>
-</div>
-
-<div class="service">
-<div class="service-icon">↗</div>
-<h3>Commande à distance</h3>
-<p>
-Envoyez votre demande et contactez-nous
-directement sur WhatsApp.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- BOUTIQUE -->
-<section class="light" id="boutique">
-<div class="container">
-
-<div class="section-head">
-<div class="eyebrow">Notre boutique</div>
-<h2>Venez nous voir.</h2>
-<p>Marrakech • Hay Mabrouka</p>
-</div>
-
-<div class="shop-grid">
-
-<div class="shop-card">
-
-<div class="shop-photo"></div>
-
-<div class="shop-info">
-
-<div class="info">
-<div class="icon">⌖</div>
-<div>
-<strong>Adresse</strong>
-<small>
-Résidence Tawhid A1 – Abwab Gueliz – Hay Mabrouka<br>
-À côté de la Croix-Rouge, face au pont & rails du train
-</small>
-</div>
-</div>
-
-<div class="info">
-<div class="icon">☎</div>
-<div>
-<strong>Téléphone</strong>
-<small>06 31 42 07 54</small>
-</div>
-</div>
-
-<div class="info">
-<div class="icon">@</div>
-<div>
-<strong>Email</strong>
-<small>espaceopticmarrakech@gmail.com</small>
-</div>
-</div>
-
-<a class="btn orange"
-href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056"
-target="_blank">
-📍 Ouvrir Google Maps
-</a>
-
-</div>
-</div>
-
-<!-- QR -->
-<div class="qr">
-
-<div class="eyebrow">Localisation</div>
-
-<h2>Retrouvez-nous facilement.</h2>
-
-<p>Scannez le QR code pour ouvrir Google Maps.</p>
-
-<div class="qr-box">
-<div id="qrcode"></div>
-</div>
-
-<a class="btn orange"
-href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056"
-target="_blank">
-Ouvrir Google Maps →
-</a>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ORDONNANCE -->
-<section class="order" id="ordonnance">
-<div class="container">
-
-<div class="order-box">
-
-<div>
-
-<div class="eyebrow">Commande à distance</div>
-
-<h2>
-Votre ordonnance,
-votre solution optique.
-</h2>
-
-<p>
-Remplissez le formulaire puis contactez-nous
-directement sur WhatsApp.
-</p>
-
-<div class="check"><b>✓</b> Simple depuis votre téléphone</div>
-<div class="check"><b>✓</b> Conseil personnalisé</div>
-<div class="check"><b>✓</b> Livraison possible</div>
-
-</div>
-
-<form class="form" onsubmit="sendOrder(event)">
-
-<input id="name"
-type="text"
-placeholder="Nom et prénom"
-required>
-
-<input id="phone"
-type="tel"
-placeholder="Téléphone"
-required>
-
-<textarea id="message"
-placeholder="Votre demande"></textarea>
-
-<input id="file"
-type="file"
-accept="image/*,.pdf">
-
-<div class="note">
-Vous pourrez joindre votre ordonnance directement
-dans WhatsApp après l'ouverture.
-</div>
-
-<button class="btn orange" type="submit">
-Envoyer sur WhatsApp →
-</button>
-
-</form>
-
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<div class="container">
-
-<div class="contact-box">
-
-<div>
-<div class="eyebrow">Contact</div>
-<h2>Parlons de votre vision.</h2>
-<p>
-Une question ? Besoin d'un conseil ?
-Contactez Espace Optic Marrakech.
-</p>
-</div>
-
-<div class="buttons">
-
-<a class="btn orange"
-href="https://wa.me/212631420754"
-target="_blank">
-WhatsApp
-</a>
-
-<a class="btn white"
-href="tel:+212631420754">
-Appeler
-</a>
-
-<a class="btn white"
-href="mailto:espaceopticmarrakech@gmail.com">
-Email
-</a>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-<img src="19756.jpg"
-class="footer-logo"
-alt="Espace Optic Marrakech">
-
-<p>
-Opticien Optométriste à Marrakech.
-Lunettes, lentilles, accessoires et conseil personnalisé.
-</p>
-</div>
-
-<div>
-<h3>Navigation</h3>
-<p><a href="#catalogue">Lunettes</a></p>
-<p><a href="#services">Services</a></p>
-<p><a href="#boutique">Boutique</a></p>
-<p><a href="#ordonnance">Ordonnance</a></p>
-</div>
-
-<div>
-<h3>Contact</h3>
-<p>06 31 42 07 54</p>
-<p>espaceopticmarrakech@gmail.com</p>
-<p>Marrakech • Hay Mabrouka</p>
-</div>
-
-</div>
-
-<div class="bottom">
-© 2026 Espace Optic Marrakech — Tous droits réservés.
-</div>
-
-</div>
-</footer>
-
-<!-- WHATSAPP -->
-<a class="float-wa"
-href="https://wa.me/212631420754"
-target="_blank">
-☎
-</a>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-<div class="modal-box">
-
-<button class="close" onclick="closeModal()">×</button>
-
-<div class="eyebrow">Espace Optic</div>
-
-<h2 id="modalTitle"></h2>
-
-<p id="modalText"></p>
-
-<br>
-
-<button class="btn orange"
-id="modalOrder">
-Commander sur WhatsApp
-</button>
-
-</div>
-</div>
-
-<script>
-
-/* =========================
-   CONFIG
-========================= */
-
-const SUPABASE_URL =
-"https://snwsxlqfndrjyttmafts.supabase.co";
-
-const SUPABASE_KEY =
-"sb_publishable_cGTW_fctHzLTgMQBluABaQ_5N9lKgNJ";
-
-const WHATSAPP = "212631420754";
-
-const MAP_URL =
-"https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056";
-
-const db =
-window.supabase
-? window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
-  )
-: null;
-
-
-/* =========================
-   DEMO PRODUCTS
-========================= */
-
-let products = [
-
-{
- id:1,
- name:"Espace Classic 01",
- category:"Homme",
- price:650,
- description:"Monture classique et élégante.",
- image:""
-},
-
-{
- id:2,
- name:"Espace Elegance 02",
- category:"Femme",
- price:750,
- description:"Une silhouette moderne et raffinée.",
- image:""
-},
-
-{
- id:3,
- name:"Espace Gold 03",
- category:"Femme",
- price:890,
- description:"Finition premium pour un style affirmé.",
- image:""
-},
-
-{
- id:4,
- name:"Espace Junior 04",
- category:"Enfant",
- price:450,
- description:"Confort et résistance pour enfant.",
- image:""
-},
-
-{
- id:5,
- name:"Espace Urban 05",
- category:"Homme",
- price:790,
- description:"Style urbain et contemporain.",
- image:""
-},
-
-{
- id:6,
- name:"Espace Light 06",
- category:"Femme",
- price:690,
- description:"Légère et confortable au quotidien.",
- image:""
-}
-
-];
-
-
-/* =========================
-   PRICE
-========================= */
-
-function price(v){
- return Number(v||0).toLocaleString("fr-MA")+" DH";
-}
-
-
-/* =========================
-   PRODUCTS
-========================= */
-
-function renderProducts(){
-
- const box=document.getElementById("products");
-
- box.innerHTML=products.map(p=>`
-
- <article class="product">
-
-   <div class="product-img">
-
-     ${
-       p.image
-       ?
-       `<img src="${p.image}" alt="${p.name}">`
-       :
-       `<div class="glasses"></div>`
-     }
-
-   </div>
-
-   <div class="product-body">
-
-     <div class="cat">${p.category}</div>
-
-     <h3>${p.name}</h3>
-
-     <p class="desc">${p.description}</p>
-
-     <div class="price">${price(p.price)}</div>
-
-     <div class="actions">
-
-       <button
-       class="btn dark"
-       onclick="details(${p.id})">
-       Détails
-       </button>
-
-       <button
-       class="btn orange"
-       onclick="orderProduct(${p.id})">
-       Commander
-       </button>
-
-     </div>
-
-   </div>
-
- </article>
-
- `).join("");
-}
-
-
-/* =========================
-   LOAD SUPABASE
-========================= */
-
-async function loadProducts(){
-
- if(!db){
-   renderProducts();
-   return;
- }
-
- try{
-
-   const {data,error}=await db
-   .from("products")
-   .select("*")
-   .eq("available",true)
-   .order("id",{ascending:true});
-
-   if(error){
-     console.log(error);
-     renderProducts();
-     return;
-   }
-
-   if(data && data.length){
-
-     products=data.map(p=>({
-
-       id:p.id,
-       name:p.name,
-       category:p.category||"Tous",
-       price:Number(p.price),
-       description:p.description||
-       "Monture élégante Espace Optic.",
-       image:p.image_url||""
-
-     }));
-
-   }
-
-   renderProducts();
-
- }catch(e){
-
-   console.log(e);
-   renderProducts();
-
- }
-
-}
-
-
-/* =========================
-   DETAILS
-========================= */
-
-function details(id){
-
- const p=products.find(x=>Number(x.id)===Number(id));
-
- if(!p)return;
-
- document.getElementById("modalTitle").textContent=p.name;
-
- document.getElementById("modalText").textContent=
- p.description+"\n\nPrix : "+price(p.price);
-
- document.getElementById("modalOrder").onclick=()=>{
-   whatsappProduct(p);
- };
-
- document.getElementById("modal").classList.add("show");
-}
-
-
-function closeModal(){
- document.getElementById("modal").classList.remove("show");
-}
-
-
-/* =========================
-   PRODUCT ORDER
-========================= */
-
-function orderProduct(id){
-
- const p=products.find(x=>Number(x.id)===Number(id));
-
- if(p) whatsappProduct(p);
-
-}
-
-
-function whatsappProduct(p){
-
- const text=
-`Bonjour Espace Optic Marrakech,
-
-Je suis intéressé(e) par :
-
-Modèle : ${p.name}
-Prix : ${price(p.price)}
-
-Je souhaite avoir plus d'informations.
-
-Merci.`;
-
- window.open(
-   "https://wa.me/"+WHATSAPP+
-   "?text="+encodeURIComponent(text),
-   "_blank"
- );
-
-}
-
-
-/* =========================
-   PRESCRIPTION
-========================= */
-
-function sendOrder(e){
-
- e.preventDefault();
-
- const name=document.getElementById("name").value;
- const phone=document.getElementById("phone").value;
- const message=document.getElementById("message").value;
-
- const file=document.getElementById("file").files[0];
-
- const fileText=file
- ? "\nOrdonnance : "+file.name+
-   "\nJe vais joindre le fichier dans WhatsApp."
- : "\nOrdonnance : aucune.";
-
- const text=
-`Bonjour Espace Optic Marrakech,
-
-Nom : ${name}
-Téléphone : ${phone}
-
-Demande :
-${message||"Je souhaite une consultation / un conseil optique."}
-${fileText}
-
-Merci.`;
-
- window.open(
-   "https://wa.me/"+WHATSAPP+
-   "?text="+encodeURIComponent(text),
-   "_blank"
- );
-
-}
-
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-function menu(){
- document.getElementById("links").classList.toggle("open");
-}
-
-
-/* =========================
-   LANGUAGE
-========================= */
-
-let ar=false;
-
-function language(){
-
- ar=!ar;
-
- document.querySelectorAll("[data-fr]")
- .forEach(x=>{
-   x.style.display=ar?"none":"";
- });
-
- document.querySelectorAll("[data-ar]")
- .forEach(x=>{
-   x.style.display=ar?"":"none";
- });
-
- document.documentElement.lang=ar?"ar":"fr";
-
- document.getElementById("links")
- .classList.remove("open");
-
-}
-
-
-/* =========================
-   QR CODE
-========================= */
-
-function makeQR(){
-
- const box=document.getElementById("qrcode");
-
- if(!box || typeof QRCode==="undefined")return;
-
- box.innerHTML="";
-
- new QRCode(box,{
-   text:MAP_URL,
-   width:190,
-   height:190,
-   colorDark:"#111111",
-   colorLight:"#ffffff",
-   correctLevel:QRCode.CorrectLevel.H
- });
-
-}
-
-
-/* =========================
-   START
-========================= */
-
-document.addEventListener(
-"DOMContentLoaded",
-()=>{
-
- renderProducts();
-
- loadProducts();
-
- makeQR();
-
-});
-
-</script>
-
-</body>
-</html>

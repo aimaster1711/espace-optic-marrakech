@@ -1,39 +1,3591 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#ff6500"><meta name="description" content="Espace Optic Marrakech — Lunettes, lentilles et conseil optique.">
-<title>Espace Optic Marrakech</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+      content="#111111">
+
+<meta name="description"
+      content="Espace Optic Marrakech – Opticien Optométriste. Lunettes, lentilles, accessoires et conseil personnalisé.">
+
+<title>Espace Optic Marrakech | Opticien Optométriste</title>
+
+<!-- Supabase -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- QR Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
 <style>
-:root{--o:#ff6500;--o2:#ff8b3d;--b:#111;--cream:#fff8f2;--muted:#777;--line:#ece6e1;--shadow:0 18px 55px #16100a14}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--b);line-height:1.5;overflow-x:hidden;width:100%}a{text-decoration:none;color:inherit}button,input{font:inherit}.wrap{width:min(1180px,92%);max-width:1180px;margin-left:auto;margin-right:auto}.top{background:#111;color:#fff;text-align:center;padding:8px;font-size:12px}.head{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(15px);border-bottom:1px solid #00000009}.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:9px;font-size:20px;font-weight:900;letter-spacing:-.8px}.logo span{color:var(--o)}.mark{width:42px;height:28px;position:relative}.mark:before,.mark:after{content:"";position:absolute;top:7px;width:21px;height:14px;border:3px solid var(--o);border-radius:10px}.mark:before{left:0}.mark:after{right:0}.mark i{position:absolute;left:17px;top:13px;width:9px;height:3px;background:var(--o)}.links{display:flex;gap:27px;font-size:14px;font-weight:800}.links a:hover{color:var(--o)}.wa{background:var(--o);color:#fff;padding:11px 16px;border-radius:12px;font-size:13px;font-weight:900}.hero{background:linear-gradient(135deg,#111 0,#202020 62%,#ff6500 160%);color:#fff}.heroGrid{min-height:570px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 13px;border:1px solid #ffffff1c;background:#ffffff0d;border-radius:99px;font-size:11px;font-weight:900;letter-spacing:1px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--o)}h1{font-size:clamp(43px,6vw,76px);line-height:.97;letter-spacing:-3px;margin:22px 0}h1 span{color:var(--o)}.hero p{max-width:520px;color:#d1d1d1;font-size:17px;word-break:normal;overflow-wrap:break-word}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;max-width:100%}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:13px;padding:13px 18px;font-weight:900;cursor:pointer}.orange{background:var(--o);color:#fff}.white{background:#fff;color:#111}.visual{height:430px;position:relative;display:grid;place-items:center}.glasses{width:420px;height:190px;position:relative;transform:rotate(-4deg);filter:drop-shadow(0 30px 30px #0005)}.glasses b{position:absolute;width:175px;height:125px;top:30px;border:10px solid #111;border-radius:45%;background:#ffffff12}.glasses .l{left:8px}.glasses .r{right:8px}.bridge{position:absolute;left:178px;top:58px;width:64px;height:25px;border-top:10px solid #111;border-radius:50%}.arm{position:absolute;top:43px;width:92px;height:9px;background:#111;border-radius:9px}.a1{left:-60px;transform:rotate(-14deg)}.a2{right:-60px;transform:rotate(14deg)}.float{position:absolute;background:#fff;color:#111;padding:12px 16px;border-radius:16px;box-shadow:var(--shadow);font-size:12px;font-weight:900}.f1{right:0;top:35px}.f2{left:0;bottom:45px}.stats{display:flex;gap:25px;background:#fff;color:#111;padding:15px 18px;border-radius:18px;width:max-content;max-width:100%;margin-top:28px;box-shadow:var(--shadow)}.stats b{font-size:20px}.stats small{display:block;color:var(--muted);font-size:10px}.section{padding:80px 0}.alt{background:var(--cream)}.headSec{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.kicker{color:var(--o);font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}.headSec h2{font-size:clamp(30px,4vw,46px);line-height:1;letter-spacing:-1.7px;margin-top:7px}.headSec p{max-width:470px;color:var(--muted);font-size:14px}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);background:#fff;padding:9px 15px;border-radius:99px;font-weight:800;cursor:pointer}.filter.active,.filter:hover{background:#111;color:#fff}.search{margin-left:auto;border:1px solid var(--line);border-radius:99px;padding:10px 15px;min-width:230px;outline:none}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:23px;overflow:hidden;background:#fff;transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.photo{height:250px;background:linear-gradient(145deg,#f3eee9,#fff);display:grid;place-items:center;position:relative}.photo img{width:100%;height:100%;object-fit:cover}.tag{position:absolute;left:13px;top:13px;background:#fff;padding:6px 10px;border-radius:99px;font-size:10px;font-weight:900}.mini{width:210px;height:110px;position:relative}.mini div{position:absolute;width:87px;height:65px;top:18px;border:6px solid #ff6500;border-radius:43%;background:#ff650011}.mini .x{left:2px}.mini .y{right:2px}.mini i{position:absolute;left:87px;top:31px;width:37px;border-top:6px solid #ff6500;border-radius:50%}.body{padding:18px}.cat{font-size:10px;color:var(--o);font-weight:900;text-transform:uppercase;letter-spacing:1px}.body h3{font-size:19px;margin:4px 0}.meta{font-size:13px;color:var(--muted)}.price{font-size:21px;font-weight:900;margin-top:12px}.actions{display:flex;gap:8px;margin-top:14px}.actions .btn{flex:1;padding:10px;font-size:12px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:27px;border:1px solid var(--line);border-radius:22px;background:#fff}.ico{width:48px;height:48px;border-radius:15px;background:#fff0e7;color:var(--o);display:grid;place-items:center;font-size:22px;margin-bottom:15px}.service h3{margin-bottom:6px}.service p{font-size:14px;color:var(--muted)}.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}.darkCard{background:#111;color:#fff;border-radius:27px;padding:35px}.darkCard p{color:#c8c8c8;margin:12px 0 20px}.checks{display:grid;gap:11px}.checks div{display:flex;gap:10px;align-items:center}.check{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--o);font-size:11px}.form{border:1px solid var(--line);border-radius:27px;padding:28px}.form label{display:block;font-size:12px;font-weight:900;margin:0 0 6px}.form input,.form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;margin-bottom:15px;outline:none}.form textarea{min-height:105px}.location{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contacts{display:grid;gap:11px;margin-top:20px}.contact{border:1px solid var(--line);border-radius:17px;padding:16px;display:flex;gap:11px}.contact strong{display:block}.contact span{font-size:13px;color:var(--muted)}.map{min-height:330px;border-radius:27px;background:linear-gradient(135deg,#161616,#292929);color:#fff;display:grid;place-items:center;text-align:center;padding:25px}.pin{font-size:44px}.map p{color:#aaa;margin:7px 0 16px}footer{background:#101010;color:#fff;padding:42px 0 22px}.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}.foot p,.foot a{color:#aaa;font-size:13px}.footlinks{display:grid;gap:7px;margin-top:10px}.copy{border-top:1px solid #292929;margin-top:30px;padding-top:16px;color:#666;font-size:11px}.modal{display:none;position:fixed;inset:0;background:#0009;z-index:99;place-items:center;padding:18px}.modal.open{display:grid}.modalBox{background:#fff;border-radius:24px;padding:27px;max-width:450px;width:100%;position:relative}.close{position:absolute;right:13px;top:13px;border:0;background:#eee;width:34px;height:34px;border-radius:50%;cursor:pointer}.modalBox p{color:var(--muted);margin:8px 0 18px}@media(max-width:800px){.links{display:none}.heroGrid{grid-template-columns:1fr;min-height:auto;padding:55px 0}.visual{height:300px}.products{grid-template-columns:repeat(2,1fr)}.services,.two,.location{grid-template-columns:1fr}.foot{grid-template-columns:1fr 1fr}}@media(max-width:540px){.wrap{width:calc(100% - 28px);max-width:none}.nav{height:68px;gap:8px}.logo{font-size:16px;white-space:nowrap}.heroGrid{padding:45px 0}.hero p{font-size:15px;max-width:100%}.glasses{transform:scale(.6) rotate(-4deg)}.float{font-size:10px;padding:9px 11px}.stats{gap:10px;padding:13px;width:100% !important;max-width:100% !important;justify-content:space-between}.section{padding:58px 0}.headSec{display:block}.headSec p{margin-top:12px}.search{margin:10px 0 0;width:100%}.products{gap:10px}.photo{height:165px}.body{padding:13px}.body h3{font-size:16px}.price{font-size:18px}.actions{display:grid}.actions .btn{width:100%}.foot{grid-template-columns:1fr}}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+:root{
+    --orange:#ff6500;
+    --orange2:#ff8a00;
+    --black:#0b0b0b;
+    --dark:#111111;
+    --dark2:#191919;
+    --white:#ffffff;
+    --cream:#fffaf5;
+    --light:#f5f3f0;
+    --gray:#777777;
+    --border:#e8e3dd;
+    --green:#25d366;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:var(--cream);
+    color:#111;
+
+    line-height:1.6;
+
+    overflow-x:hidden;
+}
+
+body.ar{
+    direction:rtl;
+    font-family:
+    Arial,
+    Tahoma,
+    sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar{
+    background:#050505;
+    color:white;
+    text-align:center;
+    padding:8px 15px;
+    font-size:13px;
+    letter-spacing:.5px;
+}
+
+.topbar strong{
+    color:var(--orange);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#080808;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.18);
+}
+
+.nav{
+    min-height:90px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:25px;
+}
+
+
+/* REAL LOGO */
+
+.brand-logo{
+    width:220px;
+    max-height:78px;
+
+    object-fit:contain;
+
+    border-radius:6px;
+}
+
+
+/* NAVIGATION */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    color:white;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:700;
+
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:var(--orange);
+}
+
+.nav-whatsapp{
+    background:var(--orange);
+    color:white!important;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+}
+
+.lang-btn{
+    background:#222;
+    color:white;
+
+    border:1px solid #444;
+
+    padding:9px 13px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-weight:800;
+}
+
+.menu{
+    display:none;
+
+    width:45px;
+    height:45px;
+
+    border:0;
+    border-radius:50%;
+
+    background:#222;
+    color:white;
+
+    font-size:22px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:700px;
+
+    display:flex;
+    align-items:center;
+
+    color:white;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.95) 0%,
+        rgba(0,0,0,.78) 42%,
+        rgba(0,0,0,.30) 100%
+    ),
+    url("shop.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:700px;
+    padding:100px 0;
+}
+
+.hero-logo{
+    width:min(500px,90%);
+    margin-bottom:30px;
+
+    border-radius:8px;
+
+    box-shadow:
+    0 15px 60px rgba(0,0,0,.5);
+}
+
+.badge{
+    display:inline-flex;
+
+    align-items:center;
+    gap:9px;
+
+    padding:9px 16px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    font-size:12px;
+    font-weight:800;
+
+    margin-bottom:22px;
+}
+
+.badge i{
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:var(--orange);
+
+    box-shadow:
+    0 0 15px var(--orange);
+}
+
+.hero h1{
+    font-size:
+    clamp(45px,7vw,78px);
+
+    line-height:.98;
+
+    letter-spacing:-3px;
+
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--orange);
+}
+
+.hero p{
+    max-width:650px;
+
+    font-size:18px;
+
+    color:#eeeeee;
+
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+.btn{
+    border:0;
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    padding:15px 23px;
+
+    border-radius:13px;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-orange{
+    background:var(--orange);
+    color:white;
+
+    box-shadow:
+    0 8px 25px rgba(255,101,0,.25);
+}
+
+.btn-white{
+    background:white;
+    color:#111;
+}
+
+.btn-dark{
+    background:#111;
+    color:white;
+}
+
+.btn-outline{
+    background:white;
+    color:#111;
+
+    border:1px solid #ddd;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats-wrap{
+    position:relative;
+
+    margin-top:-45px;
+
+    z-index:5;
+}
+
+.stats{
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.12);
+}
+
+.stats-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+}
+
+.stat{
+    padding:8px 22px;
+
+    border-right:1px solid #eee;
+}
+
+body.ar .stat{
+    border-right:0;
+    border-left:1px solid #eee;
+}
+
+.stat:last-child{
+    border:0;
+}
+
+.stat strong{
+    font-size:26px;
+}
+
+.stat span{
+    display:block;
+
+    color:#777;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.section{
+    padding:100px 0;
+}
+
+.section-head{
+    display:flex;
+
+    justify-content:space-between;
+    align-items:end;
+
+    gap:25px;
+
+    margin-bottom:45px;
+}
+
+.eyebrow{
+    color:var(--orange);
+
+    font-size:12px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:9px;
+}
+
+.section h2{
+    font-size:
+    clamp(34px,5vw,56px);
+
+    line-height:1;
+
+    letter-spacing:-2px;
+}
+
+.section-head p{
+    max-width:450px;
+
+    color:#777;
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.categories{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:16px;
+}
+
+.category{
+    min-height:200px;
+
+    border-radius:23px;
+
+    padding:26px;
+
+    background:#111;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:end;
+
+    transition:.25s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+}
+
+.category:after{
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    background:var(--orange);
+
+    right:-65px;
+    top:-65px;
+
+    opacity:.8;
+}
+
+body.ar .category:after{
+    right:auto;
+    left:-65px;
+}
+
+.category h3{
+    position:relative;
+
+    z-index:2;
+
+    font-size:24px;
+}
+
+.category p{
+    position:relative;
+
+    z-index:2;
+
+    color:#ccc;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
+   CATALOGUE
+===================================================== */
+
+.catalogue-bg{
+    background:#f7f4ef;
+}
+
+.products{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.product{
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:.25s;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.03);
+}
+
+.product:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,.10);
+}
+
+.product-image{
+    height:280px;
+
+    background:#f1efec;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.frame-demo{
+    width:190px;
+    height:78px;
+
+    border:9px solid #111;
+
+    border-radius:40px;
+
+    position:relative;
+}
+
+.frame-demo:after{
+    content:"";
+
+    position:absolute;
+
+    width:35px;
+    height:8px;
+
+    background:#111;
+
+    left:145px;
+    top:25px;
+}
+
+.product-body{
+    padding:22px;
+}
+
+.product-cat{
+    color:var(--orange);
+
+    font-size:11px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+}
+
+.product h3{
+    font-size:20px;
+
+    margin:5px 0;
+}
+
+.product-description{
+    color:#777;
+
+    font-size:13px;
+
+    min-height:42px;
+}
+
+.price{
+    font-size:24px;
+
+    font-weight:900;
+
+    margin:13px 0;
+}
+
+.product-actions{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:9px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about{
+    background:#101010;
+
+    color:white;
+}
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-image{
+    min-height:510px;
+
+    border-radius:30px;
+
+    background:
+    url("shop.jpg")
+    center/cover no-repeat;
+
+    box-shadow:
+    0 20px 70px rgba(0,0,0,.5);
+}
+
+.about h2{
+    margin-bottom:25px;
+}
+
+.about p{
+    color:#ccc;
+
+    margin-bottom:18px;
+}
+
+.check{
+    display:flex;
+
+    gap:11px;
+
+    margin:14px 0;
+
+    align-items:flex-start;
+}
+
+.check b{
+    color:var(--orange);
+
+    font-size:19px;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+}
+
+.service{
+    background:white;
+
+    padding:30px;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    transition:.25s;
+}
+
+.service:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+}
+
+.service-icon{
+    width:52px;
+    height:52px;
+
+    border-radius:15px;
+
+    background:#fff0e6;
+
+    color:var(--orange);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:23px;
+
+    margin-bottom:20px;
+}
+
+.service h3{
+    margin-bottom:8px;
+}
+
+.service p{
+    color:#777;
+
+    font-size:14px;
+}
+
+
+/* =====================================================
+   SHOP
+===================================================== */
+
+.shop-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:30px;
+}
+
+.shop-card{
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    overflow:hidden;
+}
+
+.shop-photo{
+    height:390px;
+
+    background:
+    url("shop.jpg")
+    center/cover no-repeat;
+}
+
+.shop-info{
+    padding:30px;
+}
+
+.info-line{
+    display:flex;
+
+    gap:14px;
+
+    margin:17px 0;
+}
+
+.info-icon{
+    width:42px;
+    height:42px;
+
+    flex:none;
+
+    border-radius:12px;
+
+    background:#fff0e6;
+
+    color:var(--orange);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-weight:900;
+}
+
+.info-line small{
+    color:#777;
+
+    display:block;
+
+    margin-top:2px;
+}
+
+
+/* =====================================================
+   QR
+===================================================== */
+
+.qr-card{
+    background:#0d0d0d;
+
+    color:white;
+
+    border-radius:25px;
+
+    padding:38px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.qr-card h2{
+    font-size:34px;
+
+    margin-bottom:8px;
+}
+
+.qr-card p{
+    color:#aaa;
+
+    font-size:14px;
+}
+
+.qr-box{
+    width:220px;
+    height:220px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:15px;
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+}
+
+#qrcode img,
+#qrcode canvas{
+    width:190px!important;
+    height:190px!important;
+}
+
+
+/* =====================================================
+   ORDONNANCE
+===================================================== */
+
+.order-section{
+    background:#fff0e6;
+}
+
+.order-box{
+    background:white;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:50px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.04);
+}
+
+.order-box h2{
+    margin-bottom:15px;
+}
+
+.order-box p{
+    color:#777;
+}
+
+.form{
+    display:grid;
+
+    gap:13px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    outline:none;
+
+    background:white;
+
+    color:#111;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:var(--orange);
+}
+
+textarea{
+    min-height:120px;
+
+    resize:vertical;
+}
+
+.file-note{
+    color:#777;
+
+    font-size:12px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-box{
+    background:#111;
+
+    color:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+}
+
+.contact-box p{
+    color:#aaa;
+
+    max-width:600px;
+
+    margin-top:10px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:#070707;
+
+    color:white;
+
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+
+    grid-template-columns:
+    1.4fr 1fr 1fr;
+
+    gap:45px;
+}
+
+.footer-logo{
+    width:250px;
+
+    max-height:100px;
+
+    object-fit:contain;
+
+    margin-bottom:18px;
+}
+
+footer p,
+footer a{
+    color:#999;
+
+    font-size:14px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer a:hover{
+    color:var(--orange);
+}
+
+.footer-bottom{
+    border-top:1px solid #222;
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    color:#666;
+
+    font-size:12px;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp-float{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:27px;
+
+    z-index:3000;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+body.ar .whatsapp-float{
+    right:auto;
+    left:20px;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal{
+    position:fixed;
+
+    inset:0;
+
+    z-index:4000;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:min(550px,100%);
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    position:relative;
+
+    max-height:90vh;
+
+    overflow:auto;
+}
+
+.close{
+    position:absolute;
+
+    right:18px;
+    top:15px;
+
+    width:40px;
+    height:40px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#eee;
+
+    font-size:22px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+    .nav{
+        min-height:75px;
+    }
+
+    .brand-logo{
+        width:170px;
+        max-height:62px;
+    }
+
+    .nav-links{
+        display:none;
+
+        position:absolute;
+
+        left:0;
+        right:0;
+        top:75px;
+
+        padding:20px;
+
+        background:#090909;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:10px;
+
+        box-shadow:
+        0 20px 30px rgba(0,0,0,.3);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:12px;
+        text-align:center;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        min-height:720px;
+    }
+
+    .hero-content{
+        padding:90px 0;
+    }
+
+    .hero-logo{
+        width:min(430px,95%);
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat{
+        border-bottom:1px solid #eee;
+        padding:15px;
+    }
+
+    .categories{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .products{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid,
+    .shop-grid,
+    .order-box{
+        grid-template-columns:1fr;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        display:block;
+    }
+
+    .contact-box .buttons{
+        margin-top:25px;
+    }
+}
+
+
+@media(max-width:560px){
+
+    .container{
+        width:90%;
+    }
+
+    .brand-logo{
+        width:145px;
+        max-height:55px;
+    }
+
+    .hero{
+        min-height:700px;
+
+        background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.94),
+            rgba(0,0,0,.68)
+        ),
+        url("shop.jpg")
+        65% center/cover no-repeat;
+    }
+
+    .hero h1{
+        font-size:48px;
+
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .stats-wrap{
+        margin-top:-30px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .categories,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:70px 0;
+    }
+
+    .section-head{
+        display:block;
+    }
+
+    .section-head p{
+        margin-top:15px;
+    }
+
+    .order-box{
+        padding:25px;
+    }
+
+    .about-image{
+        min-height:380px;
+    }
+
+    .shop-photo{
+        height:290px;
+    }
+
+    .qr-card{
+        padding:28px 20px;
+    }
+
+    .contact-box{
+        padding:30px;
+    }
+
+    .footer-logo{
+        width:210px;
+    }
+}
+
 </style>
+
 </head>
+
+
 <body>
-<div class="top">Conseil optique • Lunettes • Lentilles • Commande à distance</div>
-<header class="head"><div class="wrap nav"><a class="logo" href="#"><i class="mark"><i></i></i><b>ESPACE <span>OPTIC</span></b></a><nav class="links"><a href="#catalogue">Catalogue</a><a href="#services">Services</a><a href="#ordonnance">Ordonnance</a><a href="#contact">Contact</a></nav><a class="wa" href="https://wa.me/212631420754" target="_blank">WhatsApp</a></div></header>
-<section class="hero"><div class="wrap heroGrid"><div><div class="eyebrow"><i class="dot"></i>Marrakech • Hay Mabrouka</div><h1>Votre vision.<br><span>Notre expertise.</span></h1><p>Une expérience optique moderne pour découvrir vos lunettes, demander conseil et commander facilement depuis votre téléphone.</p><div class="buttons"><a class="btn orange" href="#catalogue">Découvrir les lunettes →</a><a class="btn white" href="https://wa.me/212631420754" target="_blank">Parler sur WhatsApp</a></div><div class="stats"><div><b>Pro</b><small>Conseil optique</small></div><div><b>24/7</b><small>Demande en ligne</small></div><div><b>MAR</b><small>Livraison possible</small></div></div></div><div class="visual"><div class="glasses"><b class="l"></b><b class="r"></b><i class="bridge"></i><i class="arm a1"></i><i class="arm a2"></i></div><div class="float f1">Style & qualité</div><div class="float f2">Conseil personnalisé</div></div></div></section>
-<section class="section" id="catalogue"><div class="wrap"><div class="headSec"><div><div class="kicker">Collection</div><h2>Nos lunettes</h2></div><p>Vos montures pourront être ajoutées et gérées depuis votre futur espace administrateur.</p></div><div class="filters"><button class="filter active" data-cat="Tous">Tous</button><button class="filter" data-cat="Homme">Homme</button><button class="filter" data-cat="Femme">Femme</button><button class="filter" data-cat="Enfant">Enfant</button><input id="search" class="search" placeholder="Rechercher une monture..."></div><div id="products" class="products"></div></div></section>
-<section class="section alt" id="services"><div class="wrap"><div class="headSec"><div><div class="kicker">Nos services</div><h2>Tout pour votre confort visuel</h2></div></div><div class="services"><article class="service"><div class="ico">◌</div><h3>Lunettes</h3><p>Montures modernes sélectionnées selon votre style et votre correction.</p></article><article class="service"><div class="ico">◉</div><h3>Lentilles</h3><p>Conseil et accompagnement pour une solution confortable et adaptée.</p></article><article class="service"><div class="ico">✓</div><h3>Conseil optique</h3><p>Un accompagnement personnalisé pour mieux comprendre votre équipement.</p></article></div></div></section>
-<section class="section" id="ordonnance"><div class="wrap two"><div class="darkCard"><div class="kicker">Commande à distance</div><h2>Vous avez une ordonnance ?</h2><p>Envoyez vos informations et échangez directement avec Espace Optic pour préparer votre commande.</p><div class="checks"><div><i class="check">1</i> Envoyez votre ordonnance</div><div><i class="check">2</i> Recevez nos conseils et le devis</div><div><i class="check">3</i> Validez votre commande</div><div><i class="check">4</i> Livraison selon votre adresse</div></div></div><form class="form" onsubmit="sendOrder(event)"><label>Nom</label><input id="name" required placeholder="Votre nom"><label>Téléphone</label><input id="phone" required placeholder="06 XX XX XX XX"><label>Message</label><textarea id="msg" placeholder="Je souhaite des lunettes homme..."></textarea><label>Ordonnance (optionnel)</label><input id="file" type="file" accept="image/*,.pdf"><button class="btn orange" style="width:100%">Envoyer sur WhatsApp →</button></form></div></section>
-<section class="section alt" id="contact"><div class="wrap location"><div><div class="kicker">Nous trouver</div><h2>Espace Optic Marrakech</h2><div class="contacts"><div class="contact">⌖<div><strong>Adresse</strong><span>Résidence Tawhid A1 – Abwab Gueliz – Hay Mabrouka, à côté de la Croix-Rouge, face au pont & rails du train</span></div></div><div class="contact">☎<div><strong>Téléphone</strong><span>06 31 42 07 54</span></div></div><div class="contact">✉<div><strong>Email</strong><span>espaceopticmarrakech@gmail.com</span></div></div></div><a class="btn orange" style="margin-top:18px" href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056" target="_blank">Ouvrir Google Maps →</a></div><div class="map"><div><div class="pin">⌖</div><h3>Abwab Gueliz • Hay Mabrouka</h3><p>À côté de la Croix-Rouge<br>Face au pont & rails du train</p><a class="btn white" href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056" target="_blank">Itinéraire</a></div></div></div></section>
-<footer><div class="wrap foot"><div><div class="logo"><i class="mark"><i></i></i><b>ESPACE <span>OPTIC</span></b></div><p style="margin-top:10px">Lunettes • Lentilles • Conseil<br>Marrakech</p></div><div><b>Navigation</b><div class="footlinks"><a href="#catalogue">Catalogue</a><a href="#services">Services</a><a href="#ordonnance">Ordonnance</a><a href="#contact">Contact</a></div></div><div><b>Contact</b><div class="footlinks"><a href="tel:+212631420754">06 31 42 07 54</a><a href="mailto:espaceopticmarrakech@gmail.com">espaceopticmarrakech@gmail.com</a><a href="https://wa.me/212631420754">WhatsApp</a></div></div></div><div class="wrap copy">© 2026 Espace Optic Marrakech — Tous droits réservés.</div></footer>
-<div id="modal" class="modal"><div class="modalBox"><button class="close" onclick="closeModal()">×</button><h3 id="mt"></h3><p id="md"></p><a id="mw" class="btn orange" style="width:100%" target="_blank">Demander sur WhatsApp →</a></div></div>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="topbar">
+
+    <strong>ESPACE OPTIC</strong>
+
+    <span data-fr>
+        • Marrakech • Hay Mabrouka • Opticien Optométriste
+    </span>
+
+    <span data-ar style="display:none">
+        • مراكش • حي مبروكة • أخصائي بصريات
+    </span>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="container nav">
+
+
+    <a href="#home">
+
+        <img
+            src="19756.jpg"
+            class="brand-logo"
+            alt="Espace Optic Marrakech">
+
+    </a>
+
+
+    <nav class="nav-links" id="nav">
+
+
+        <a href="#catalogue" data-fr>
+            Lunettes
+        </a>
+
+        <a href="#catalogue" data-ar style="display:none">
+            النظارات
+        </a>
+
+
+        <a href="#services" data-fr>
+            Services
+        </a>
+
+        <a href="#services" data-ar style="display:none">
+            الخدمات
+        </a>
+
+
+        <a href="#boutique" data-fr>
+            Boutique
+        </a>
+
+        <a href="#boutique" data-ar style="display:none">
+            المحل
+        </a>
+
+
+        <a href="#ordonnance" data-fr>
+            Ordonnance
+        </a>
+
+        <a href="#ordonnance" data-ar style="display:none">
+            الوصفة الطبية
+        </a>
+
+
+        <a href="#contact" data-fr>
+            Contact
+        </a>
+
+        <a href="#contact" data-ar style="display:none">
+            اتصل بنا
+        </a>
+
+
+        <button
+            class="lang-btn"
+            onclick="toggleLanguage()"
+            id="langButton">
+            العربية
+        </button>
+
+
+        <a
+            href="https://wa.me/212631420754"
+            target="_blank"
+            class="nav-whatsapp">
+
+            WhatsApp
+
+        </a>
+
+
+    </nav>
+
+
+    <button
+        class="menu"
+        onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+
+    <div class="badge">
+
+        <i></i>
+
+        <span data-fr>
+            MARRAKECH • HAY MABROUKA
+        </span>
+
+        <span data-ar style="display:none">
+            مراكش • حي مبروكة
+        </span>
+
+    </div>
+
+
+    <img
+        src="19756.jpg"
+        class="hero-logo"
+        alt="Espace Optic Marrakech Logo">
+
+
+    <h1>
+
+        <span data-fr>
+            Votre vision.<br>
+            Notre expertise.
+        </span>
+
+        <span data-ar style="display:none">
+            رؤيتكم.<br>
+            خبرتنا.
+        </span>
+
+    </h1>
+
+
+    <p data-fr>
+
+        Découvrez Espace Optic Marrakech :
+        lunettes, lentilles, accessoires et
+        conseil optique personnalisé dans
+        un espace moderne et chaleureux.
+
+    </p>
+
+
+    <p data-ar style="display:none">
+
+        مرحباً بكم في Espace Optic Marrakech.
+        نظارات، عدسات، إكسسوارات واستشارة
+        بصرية شخصية في فضاء عصري ومريح.
+
+    </p>
+
+
+    <div class="buttons">
+
+
+        <a
+            href="#catalogue"
+            class="btn btn-orange">
+
+            <span data-fr>
+                Découvrir nos lunettes →
+            </span>
+
+            <span data-ar style="display:none">
+                اكتشف نظاراتنا ←
+            </span>
+
+        </a>
+
+
+        <a
+            href="https://wa.me/212631420754"
+            target="_blank"
+            class="btn btn-white">
+
+            WhatsApp
+
+        </a>
+
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056"
+            target="_blank"
+            class="btn btn-white">
+
+            Google Maps
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<div class="container stats-wrap">
+
+<div class="stats">
+
+<div class="stats-grid">
+
+
+    <div class="stat">
+
+        <strong>Pro</strong>
+
+        <span data-fr>
+            Conseil optique
+        </span>
+
+        <span data-ar style="display:none">
+            استشارة بصرية
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>24/7</strong>
+
+        <span data-fr>
+            Demande en ligne
+        </span>
+
+        <span data-ar style="display:none">
+            الطلب عبر الإنترنت
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>MAR</strong>
+
+        <span data-fr>
+            Livraison possible
+        </span>
+
+        <span data-ar style="display:none">
+            إمكانية التوصيل
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>✓</strong>
+
+        <span data-fr>
+            Service personnalisé
+        </span>
+
+        <span data-ar style="display:none">
+            خدمة شخصية
+        </span>
+
+    </div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow" data-fr>
+    Notre sélection
+</div>
+
+<div class="eyebrow" data-ar style="display:none">
+    مجموعتنا
+</div>
+
+
+<h2 data-fr>
+    Pour chaque regard.
+</h2>
+
+<h2 data-ar style="display:none">
+    لكل نظرة.
+</h2>
+
+</div>
+
+
+<p data-fr>
+
+    Des montures modernes et élégantes
+    pour femme, homme et enfant.
+
+</p>
+
+
+<p data-ar style="display:none">
+
+    تشكيلة عصرية وأنيقة للنساء والرجال والأطفال.
+
+</p>
+
+</div>
+
+
+<div class="categories">
+
+
+<div class="category">
+
+<h3 data-fr>Femme</h3>
+<h3 data-ar style="display:none">نساء</h3>
+
+<p data-fr>Élégance & caractère</p>
+<p data-ar style="display:none">أناقة وتميز</p>
+
+</div>
+
+
+<div class="category">
+
+<h3 data-fr>Homme</h3>
+<h3 data-ar style="display:none">رجال</h3>
+
+<p data-fr>Style & précision</p>
+<p data-ar style="display:none">أناقة ودقة</p>
+
+</div>
+
+
+<div class="category">
+
+<h3 data-fr>Enfant</h3>
+<h3 data-ar style="display:none">أطفال</h3>
+
+<p data-fr>Confort & résistance</p>
+<p data-ar style="display:none">راحة ومتانة</p>
+
+</div>
+
+
+<div class="category">
+
+<h3 data-fr>Lentilles</h3>
+<h3 data-ar style="display:none">عدسات</h3>
+
+<p data-fr>Confort visuel</p>
+<p data-ar style="display:none">راحة بصرية</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CATALOGUE
+===================================================== -->
+
+<section
+    class="section catalogue-bg"
+    id="catalogue">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow" data-fr>
+    Catalogue
+</div>
+
+<div class="eyebrow" data-ar style="display:none">
+    الكتالوج
+</div>
+
+
+<h2 data-fr>
+    Nos lunettes.
+</h2>
+
+<h2 data-ar style="display:none">
+    نظاراتنا.
+</h2>
+
+</div>
+
+
+<p data-fr>
+
+    Découvrez notre sélection.
+    Les produits peuvent être commandés
+    directement via WhatsApp.
+
+</p>
+
+
+<p data-ar style="display:none">
+
+    اكتشفوا مجموعتنا.
+    يمكنكم طلب المنتجات مباشرة عبر WhatsApp.
+
+</p>
+
+</div>
+
+
+<div
+    class="products"
+    id="products">
+
+    <!-- Products generated by JavaScript -->
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section about">
+
+<div class="container about-grid">
+
+
+<div class="about-image"></div>
+
+
+<div>
+
+
+<div class="eyebrow">
+    Espace Optic Marrakech
+</div>
+
+
+<h2 data-fr>
+    Un espace pensé pour
+    votre confort visuel.
+</h2>
+
+<h2 data-ar style="display:none">
+    فضاء مصمم لراحتكم البصرية.
+</h2>
+
+
+<p data-fr>
+
+    Notre boutique vous accueille dans
+    un environnement moderne et chaleureux
+    pour vous accompagner dans le choix
+    de vos lunettes et solutions optiques.
+
+</p>
+
+
+<p data-ar style="display:none">
+
+    نرحب بكم في فضاء عصري ومريح،
+    ونساعدكم في اختيار النظارات والحلول
+    البصرية المناسبة لكم.
+
+</p>
+
+
+<div class="check">
+
+    <b>✓</b>
+
+    <span data-fr>
+        Conseil optique personnalisé
+    </span>
+
+    <span data-ar style="display:none">
+        استشارة بصرية شخصية
+    </span>
+
+</div>
+
+
+<div class="check">
+
+    <b>✓</b>
+
+    <span data-fr>
+        Lunettes homme, femme et enfant
+    </span>
+
+    <span data-ar style="display:none">
+        نظارات للرجال والنساء والأطفال
+    </span>
+
+</div>
+
+
+<div class="check">
+
+    <b>✓</b>
+
+    <span data-fr>
+        Lentilles de contact
+    </span>
+
+    <span data-ar style="display:none">
+        عدسات لاصقة
+    </span>
+
+</div>
+
+
+<div class="check">
+
+    <b>✓</b>
+
+    <span data-fr>
+        Commande à distance
+    </span>
+
+    <span data-ar style="display:none">
+        الطلب عن بعد
+    </span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+    class="section"
+    id="services">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow" data-fr>
+    Nos services
+</div>
+
+<div class="eyebrow" data-ar style="display:none">
+    خدماتنا
+</div>
+
+
+<h2 data-fr>
+    Plus qu'une paire.
+</h2>
+
+<h2 data-ar style="display:none">
+    أكثر من مجرد نظارات.
+</h2>
+
+</div>
+
+
+<p data-fr>
+    Un accompagnement complet avant,
+    pendant et après votre achat.
+</p>
+
+<p data-ar style="display:none">
+    مواكبة كاملة قبل وأثناء وبعد الشراء.
+</p>
+
+</div>
+
+
+<div class="services">
+
+
+<div class="service">
+
+<div class="service-icon">
+    ◉
+</div>
+
+<h3 data-fr>
+    Conseil optique
+</h3>
+
+<h3 data-ar style="display:none">
+    الاستشارة البصرية
+</h3>
+
+<p data-fr>
+    Nous vous aidons à choisir
+    la monture adaptée à votre visage
+    et à vos besoins.
+</p>
+
+<p data-ar style="display:none">
+    نساعدكم على اختيار الإطار المناسب
+    لوجهكم واحتياجاتكم.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+    ⌁
+</div>
+
+<h3 data-fr>
+    Lentilles
+</h3>
+
+<h3 data-ar style="display:none">
+    العدسات
+</h3>
+
+<p data-fr>
+    Découvrez nos solutions de lentilles
+    pour votre confort quotidien.
+</p>
+
+<p data-ar style="display:none">
+    اكتشفوا حلول العدسات المناسبة
+    لراحتكم اليومية.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+    ↗
+</div>
+
+<h3 data-fr>
+    Commande à distance
+</h3>
+
+<h3 data-ar style="display:none">
+    الطلب عن بعد
+</h3>
+
+<p data-fr>
+    Envoyez votre ordonnance et
+    contactez-nous directement.
+</p>
+
+<p data-ar style="display:none">
+    أرسلوا الوصفة الطبية وتواصلوا معنا
+    مباشرة من هاتفكم.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     BOUTIQUE
+===================================================== -->
+
+<section
+    class="section"
+    id="boutique">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow" data-fr>
+    Notre boutique
+</div>
+
+<div class="eyebrow" data-ar style="display:none">
+    محلنا
+</div>
+
+
+<h2 data-fr>
+    Venez nous voir.
+</h2>
+
+<h2 data-ar style="display:none">
+    زورونا.
+</h2>
+
+</div>
+
+
+<p data-fr>
+    Retrouvez-nous facilement à Marrakech,
+    Hay Mabrouka.
+</p>
+
+<p data-ar style="display:none">
+    تجدوننا بسهولة في مراكش،
+    حي مبروكة.
+</p>
+
+</div>
+
+
+<div class="shop-grid">
+
+
+<!-- SHOP CARD -->
+
+<div class="shop-card">
+
+
+<div class="shop-photo"></div>
+
+
+<div class="shop-info">
+
+
+<div class="info-line">
+
+<div class="info-icon">
+    ⌖
+</div>
+
+<div>
+
+<strong data-fr>
+    Adresse
+</strong>
+
+<strong data-ar style="display:none">
+    العنوان
+</strong>
+
+<small data-fr>
+
+    Résidence Tawhid A1 –
+    Abwab Gueliz – Hay Mabrouka<br>
+
+    À côté de la Croix-Rouge,
+    face au pont & rails du train
+
+</small>
+
+<small data-ar style="display:none">
+
+    إقامة التوحيد A1 –
+    أبواب كليز – حي مبروكة<br>
+
+    بجانب الصليب الأحمر،
+    مقابل القنطرة وسكة القطار
+
+</small>
+
+</div>
+
+</div>
+
+
+<div class="info-line">
+
+<div class="info-icon">
+    ☎
+</div>
+
+<div>
+
+<strong>
+    Téléphone
+</strong>
+
+<small>
+    06 31 42 07 54
+</small>
+
+</div>
+
+</div>
+
+
+<div class="info-line">
+
+<div class="info-icon">
+    @
+</div>
+
+<div>
+
+<strong>
+    Email
+</strong>
+
+<small>
+    espaceopticmarrakech@gmail.com
+</small>
+
+</div>
+
+</div>
+
+
+<a
+    href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056"
+    target="_blank"
+    class="btn btn-orange">
+
+    📍 Google Maps
+
+</a>
+
+
+</div>
+
+</div>
+
+
+<!-- QR CARD -->
+
+<div class="qr-card">
+
+
+<div class="eyebrow">
+    Localisation
+</div>
+
+
+<h2 data-fr>
+    Retrouvez-nous facilement.
+</h2>
+
+<h2 data-ar style="display:none">
+    اعثروا علينا بسهولة.
+</h2>
+
+
+<p data-fr>
+    Scannez le QR code pour ouvrir
+    directement Google Maps.
+</p>
+
+<p data-ar style="display:none">
+    امسح رمز QR لفتح موقعنا مباشرة
+    على Google Maps.
+</p>
+
+
+<div class="qr-box">
+
+    <div id="qrcode"></div>
+
+</div>
+
+
+<a
+    href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056"
+    target="_blank"
+    class="btn btn-orange">
+
+    Ouvrir Google Maps →
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ORDONNANCE
+===================================================== -->
+
+<section
+    class="section order-section"
+    id="ordonnance">
+
+<div class="container">
+
+
+<div class="order-box">
+
+
+<div>
+
+
+<div class="eyebrow" data-fr>
+    Commande à distance
+</div>
+
+<div class="eyebrow" data-ar style="display:none">
+    الطلب عن بعد
+</div>
+
+
+<h2 data-fr>
+    Votre ordonnance,
+    votre solution optique.
+</h2>
+
+<h2 data-ar style="display:none">
+    وصفتكم الطبية،
+    وحلكم البصري.
+</h2>
+
+
+<p data-fr>
+
+    Remplissez le formulaire.
+    Vous pourrez ensuite nous contacter
+    directement sur WhatsApp.
+
+</p>
+
+
+<p data-ar style="display:none">
+
+    املأوا الاستمارة ثم تواصلوا معنا
+    مباشرة عبر WhatsApp.
+
+</p>
+
+
+<br>
+
+
+<div class="check">
+
+    <b>✓</b>
+
+    <span data-fr>
+        Simple depuis votre téléphone
+    </span>
+
+    <span data-ar style="display:none">
+        سهل من الهاتف
+    </span>
+
+</div>
+
+
+<div class="check">
+
+    <b>✓</b>
+
+    <span data-fr>
+        Conseil personnalisé
+    </span>
+
+    <span data-ar style="display:none">
+        استشارة شخصية
+    </span>
+
+</div>
+
+
+<div class="check">
+
+    <b>✓</b>
+
+    <span data-fr>
+        Livraison possible
+    </span>
+
+    <span data-ar style="display:none">
+        إمكانية التوصيل
+    </span>
+
+</div>
+
+
+</div>
+
+
+<form
+    class="form"
+    onsubmit="sendPrescription(event)">
+
+
+<input
+    id="clientName"
+    type="text"
+    placeholder="Nom et prénom"
+    required>
+
+
+<input
+    id="clientPhone"
+    type="tel"
+    placeholder="Téléphone"
+    required>
+
+
+<textarea
+    id="clientMessage"
+    placeholder="Votre demande"></textarea>
+
+
+<input
+    id="prescription"
+    type="file"
+    accept="image/*,.pdf">
+
+
+<div class="file-note">
+
+    Le fichier reste sur votre téléphone.
+    Son nom sera transmis dans le message WhatsApp.
+
+</div>
+
+
+<button
+    type="submit"
+    class="btn btn-orange">
+
+    Envoyer sur WhatsApp →
+
+</button>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    class="section"
+    id="contact">
+
+<div class="container">
+
+
+<div class="contact-box">
+
+
+<div>
+
+<div class="eyebrow">
+    Contact
+</div>
+
+
+<h2 data-fr>
+    Parlons de votre vision.
+</h2>
+
+<h2 data-ar style="display:none">
+    لنتحدث عن رؤيتكم.
+</h2>
+
+
+<p data-fr>
+    Une question ? Besoin d'un conseil ?
+    Contactez directement Espace Optic Marrakech.
+</p>
+
+<p data-ar style="display:none">
+    عندكم سؤال أو تحتاجون إلى استشارة؟
+    تواصلوا مباشرة مع Espace Optic Marrakech.
+</p>
+
+</div>
+
+
+<div class="buttons">
+
+
+<a
+    href="https://wa.me/212631420754"
+    target="_blank"
+    class="btn btn-orange">
+
+    WhatsApp
+
+</a>
+
+
+<a
+    href="tel:+212631420754"
+    class="btn btn-white">
+
+    Appeler
+
+</a>
+
+
+<a
+    href="mailto:espaceopticmarrakech@gmail.com"
+    class="btn btn-white">
+
+    Email
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+
+<div class="footer-grid">
+
+
+<div>
+
+<img
+    src="19756.jpg"
+    class="footer-logo"
+    alt="Espace Optic Marrakech">
+
+
+<p data-fr>
+    Opticien Optométriste à Marrakech.
+    Lunettes, lentilles, accessoires
+    et conseil personnalisé.
+</p>
+
+<p data-ar style="display:none">
+    أخصائي بصريات في مراكش.
+    نظارات، عدسات، إكسسوارات
+    واستشارة شخصية.
+</p>
+
+</div>
+
+
+<div>
+
+<h3 data-fr>
+    Navigation
+</h3>
+
+<h3 data-ar style="display:none">
+    التصفح
+</h3>
+
+
+<p>
+    <a href="#catalogue">
+        Lunettes
+    </a>
+</p>
+
+<p>
+    <a href="#services">
+        Services
+    </a>
+</p>
+
+<p>
+    <a href="#boutique">
+        Boutique
+    </a>
+</p>
+
+<p>
+    <a href="#ordonnance">
+        Ordonnance
+    </a>
+</p>
+
+</div>
+
+
+<div>
+
+<h3 data-fr>
+    Contact
+</h3>
+
+<h3 data-ar style="display:none">
+    الاتصال
+</h3>
+
+
+<p>
+    06 31 42 07 54
+</p>
+
+<p>
+    espaceopticmarrakech@gmail.com
+</p>
+
+<p>
+    Marrakech • Hay Mabrouka
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+    © 2026 Espace Optic Marrakech —
+    Tous droits réservés.
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     FLOAT WHATSAPP
+===================================================== -->
+
+<a
+    class="whatsapp-float"
+    href="https://wa.me/212631420754"
+    target="_blank"
+    aria-label="WhatsApp">
+
+    ☎
+
+</a>
+
+
+<!-- =====================================================
+     PRODUCT MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="modal">
+
+
+<div class="modal-box">
+
+
+<button
+    class="close"
+    onclick="closeModal()">
+
+    ×
+
+</button>
+
+
+<div class="eyebrow">
+    Espace Optic
+</div>
+
+
+<h2 id="modalTitle"></h2>
+
+
+<p id="modalText"></p>
+
+
+<br>
+
+
+<button
+    id="modalOrder"
+    class="btn btn-orange">
+
+    Commander sur WhatsApp
+
+</button>
+
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
-const SUPABASE_URL="https://snwsxlqfndrjyttmafts.supabase.co",SUPABASE_PUBLISHABLE_KEY="sb_publishable_cGTW_fctHzLTgMQBluABaQ_5N9lKgNJ";
-const db=window.supabase?supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY):null;
-const demo=[{id:1,name:'Espace Classic 01',category:'Homme',price:650,color:'Noir',description:'Monture classique et élégante.'},{id:2,name:'Espace Elegance 02',category:'Femme',price:750,color:'Orange',description:'Une silhouette moderne et raffinée.'},{id:3,name:'Espace Gold 03',category:'Femme',price:890,color:'Doré',description:'Finition premium pour un style affirmé.'},{id:4,name:'Espace Junior 04',category:'Enfant',price:450,color:'Noir',description:'Confort et style pour les plus jeunes.'},{id:5,name:'Espace Urban 05',category:'Homme',price:790,color:'Noir',description:'Design contemporain au quotidien.'},{id:6,name:'Espace Light 06',category:'Femme',price:690,color:'Orange',description:'Légère, moderne et confortable.'}];
-let products=[...demo],cat='Tous';
-const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
-const price=n=>Number(n||0).toLocaleString('fr-MA');
-const wa=p=>'https://wa.me/212631420754?text='+encodeURIComponent(`Bonjour Espace Optic, je suis intéressé(e) par ${p.name} (${p.price} DH).`);
-function render(){let q=search.value.toLowerCase().trim(),list=products.filter(p=>(cat==='Tous'||p.category===cat)&&(!q||(`${p.name} ${p.color} ${p.category}`).toLowerCase().includes(q)));productsBox.innerHTML=list.length?list.map(p=>`<article class="card"><div class="photo">${p.image_url?`<img src="${esc(p.image_url)}" alt="${esc(p.name)}">`:`<div class="mini"><div class="x"></div><div class="y"></div><i></i></div>`}<span class="tag">${esc(p.category)}</span></div><div class="body"><div class="cat">${esc(p.color||'Collection')}</div><h3>${esc(p.name)}</h3><div class="meta">${esc(p.description||'Monture disponible chez Espace Optic')}</div><div class="price">${price(p.price)} DH</div><div class="actions"><button class="btn" onclick="details(${p.id})">Détails</button><a class="btn orange" href="${wa(p)}" target="_blank">Commander</a></div></div></article>`).join(''):'<div style="grid-column:1/-1;text-align:center;padding:40px;color:#777">Aucune monture trouvée.</div>'}
-async function load(){if(db){let r=await db.from('products').select('*').eq('available',true).order('id',{ascending:true});if(!r.error&&r.data?.length)products=r.data.map(p=>({...p,price:Number(p.price)}))}render()}
-function details(id){let p=products.find(x=>x.id===id);if(!p)return;mt.textContent=p.name;md.textContent=`${p.category} • ${p.color||'Monture'} • ${price(p.price)} DH. ${p.description||''}`;mw.href=wa(p);modal.classList.add('open')}
-function closeModal(){modal.classList.remove('open')}
-document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');cat=b.dataset.cat;render()});search.oninput=render;modal.onclick=e=>{if(e.target===modal)closeModal()};
-function sendOrder(e){e.preventDefault();let f=document.getElementById('file').files[0],t=`Bonjour Espace Optic Marrakech,%0ANom: ${encodeURIComponent(name.value)}%0ATéléphone: ${encodeURIComponent(phone.value)}%0AMessage: ${encodeURIComponent(msg.value||'Je souhaite un conseil optique.')}${f?`%0AOrdonnance sélectionnée: ${encodeURIComponent(f.name)}`:''}`;window.open('https://wa.me/212631420754?text='+t,'_blank')}
-const productsBox=document.getElementById('products');load();
+
+
+/* =====================================================
+   CONFIGURATION
+===================================================== */
+
+const SUPABASE_URL =
+"https://snwsxlqfndrjyttmafts.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+"sb_publishable_cGTW_fctHzLTgMQBluABaQ_5N9lKgNJ";
+
+const WHATSAPP =
+"212631420754";
+
+const MAP_URL =
+"https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056";
+
+
+/* =====================================================
+   SUPABASE
+===================================================== */
+
+const db =
+window.supabase
+?
+window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+)
+:
+null;
+
+
+/* =====================================================
+   FALLBACK PRODUCTS
+===================================================== */
+
+let products = [
+
+{
+    id:1,
+    name:"Espace Classic 01",
+    category:"Homme",
+    price:650,
+    color:"#111111",
+    description:
+    "Monture classique et élégante.",
+    image:""
+},
+
+{
+    id:2,
+    name:"Espace Elegance 02",
+    category:"Femme",
+    price:750,
+    color:"#ff6500",
+    description:
+    "Une silhouette moderne et raffinée.",
+    image:""
+},
+
+{
+    id:3,
+    name:"Espace Gold 03",
+    category:"Femme",
+    price:890,
+    color:"#c99b2b",
+    description:
+    "Finition premium pour un style affirmé.",
+    image:""
+},
+
+{
+    id:4,
+    name:"Espace Junior 04",
+    category:"Enfant",
+    price:450,
+    color:"#111111",
+    description:
+    "Confort et résistance pour enfant.",
+    image:""
+},
+
+{
+    id:5,
+    name:"Espace Urban 05",
+    category:"Homme",
+    price:790,
+    color:"#111111",
+    description:
+    "Style urbain et contemporain.",
+    image:""
+},
+
+{
+    id:6,
+    name:"Espace Light 06",
+    category:"Femme",
+    price:690,
+    color:"#ff6500",
+    description:
+    "Légère et confortable au quotidien.",
+    image:""
+}
+
+];
+
+
+/* =====================================================
+   FORMAT PRICE
+===================================================== */
+
+function formatPrice(value){
+
+    return Number(value || 0)
+    .toLocaleString("fr-MA");
+
+}
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHtml(value){
+
+    return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* =====================================================
+   LOAD SUPABASE PRODUCTS
+===================================================== */
+
+async function loadProducts(){
+
+    if(!db){
+
+        renderProducts();
+
+        return;
+
+    }
+
+    try{
+
+        const result =
+        await db
+        .from("products")
+        .select("*")
+        .eq("available",true)
+        .order("id",{ascending:true});
+
+
+        if(result.error){
+
+            console.log(
+                "Supabase:",
+                result.error.message
+            );
+
+            renderProducts();
+
+            return;
+        }
+
+
+        if(result.data &&
+           result.data.length){
+
+            products =
+            result.data.map(p=>({
+
+                id:p.id,
+
+                name:p.name,
+
+                category:
+                p.category ||
+                "Tous",
+
+                price:
+                Number(p.price),
+
+                description:
+                p.description ||
+                "Monture élégante Espace Optic.",
+
+                image:
+                p.image_url ||
+                "",
+
+                color:
+                p.color === "Orange"
+                ? "#ff6500"
+                :
+                p.color === "Doré"
+                ? "#c99b2b"
+                :
+                "#111111"
+
+            }));
+
+        }
+
+
+        renderProducts();
+
+    }
+    catch(error){
+
+        console.log(error);
+
+        renderProducts();
+
+    }
+
+}
+
+
+/* =====================================================
+   RENDER PRODUCTS
+===================================================== */
+
+function renderProducts(){
+
+    const box =
+    document.getElementById("products");
+
+    if(!box) return;
+
+
+    if(!products.length){
+
+        box.innerHTML = `
+
+        <div style="
+        grid-column:1/-1;
+        text-align:center;
+        padding:50px;
+        color:#777;
+        background:white;
+        border-radius:20px;">
+
+            Aucun produit disponible actuellement.
+
+        </div>
+
+        `;
+
+        return;
+    }
+
+
+    box.innerHTML =
+
+    products.map(p=>`
+
+        <article class="product">
+
+
+            <div class="product-image">
+
+                ${
+                    p.image
+
+                    ?
+
+                    `
+                    <img
+                    src="${escapeHtml(p.image)}"
+                    alt="${escapeHtml(p.name)}"
+                    loading="lazy">
+                    `
+
+                    :
+
+                    `
+                    <div
+                    class="frame-demo"
+                    style="border-color:${p.color}">
+                    </div>
+                    `
+                }
+
+            </div>
+
+
+            <div class="product-body">
+
+
+                <div class="product-cat">
+
+                    ${escapeHtml(p.category)}
+
+                </div>
+
+
+                <h3>
+
+                    ${escapeHtml(p.name)}
+
+                </h3>
+
+
+                <p class="product-description">
+
+                    ${escapeHtml(p.description)}
+
+                </p>
+
+
+                <div class="price">
+
+                    ${formatPrice(p.price)}
+                    DH
+
+                </div>
+
+
+                <div class="product-actions">
+
+
+                    <button
+                    class="btn btn-outline"
+                    onclick="showProductById(${p.id})">
+
+                        Détails
+
+                    </button>
+
+
+                    <button
+                    class="btn btn-orange"
+                    onclick="orderProductById(${p.id})">
+
+                        Commander
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+    `).join("");
+
+}
+
+
+/* =====================================================
+   PRODUCT DETAILS
+===================================================== */
+
+function showProductById(id){
+
+    const product =
+    products.find(
+        p => Number(p.id) === Number(id)
+    );
+
+    if(!product) return;
+
+
+    document
+    .getElementById("modalTitle")
+    .textContent =
+    product.name;
+
+
+    document
+    .getElementById("modalText")
+    .textContent =
+
+    `${product.description}
+
+Prix : ${formatPrice(product.price)} DH`;
+
+
+    document
+    .getElementById("modalOrder")
+    .onclick = function(){
+
+        orderProduct(
+            product.name,
+            product.price
+        );
+
+    };
+
+
+    document
+    .getElementById("modal")
+    .classList
+    .add("active");
+
+}
+
+
+/* =====================================================
+   CLOSE MODAL
+===================================================== */
+
+function closeModal(){
+
+    document
+    .getElementById("modal")
+    .classList
+    .remove("active");
+
+}
+
+
+/* =====================================================
+   PRODUCT WHATSAPP ORDER
+===================================================== */
+
+function orderProduct(
+    name,
+    price
+){
+
+    const text =
+
+`Bonjour Espace Optic Marrakech,
+
+Je suis intéressé(e) par :
+
+Modèle : ${name}
+Prix : ${formatPrice(price)} DH
+
+Je souhaite avoir plus d'informations.
+
+Merci.
+
+---
+
+مرحباً Espace Optic Marrakech،
+
+أنا مهتم(ة) بهذا الموديل:
+
+الموديل : ${name}
+الثمن : ${formatPrice(price)} درهم
+
+أرغب في الحصول على مزيد من المعلومات.
+
+شكراً.`;
+
+
+    window.open(
+
+        "https://wa.me/"
+        +
+        WHATSAPP
+        +
+        "?text="
+        +
+        encodeURIComponent(text),
+
+        "_blank"
+
+    );
+
+}
+
+
+function orderProductById(id){
+
+    const product =
+    products.find(
+        p => Number(p.id) === Number(id)
+    );
+
+    if(!product) return;
+
+
+    orderProduct(
+        product.name,
+        product.price
+    );
+
+}
+
+
+/* =====================================================
+   PRESCRIPTION
+===================================================== */
+
+function sendPrescription(event){
+
+    event.preventDefault();
+
+
+    const name =
+    document
+    .getElementById("clientName")
+    .value
+    .trim();
+
+
+    const phone =
+    document
+    .getElementById("clientPhone")
+    .value
+    .trim();
+
+
+    const message =
+    document
+    .getElementById("clientMessage")
+    .value
+    .trim();
+
+
+    const file =
+    document
+    .getElementById("prescription")
+    .files[0];
+
+
+    const fileText =
+    file
+
+    ?
+
+    `Ordonnance sélectionnée :
+${file.name}
+Veuillez joindre le fichier directement dans WhatsApp.`
+
+    :
+
+    "Aucune ordonnance jointe.";
+
+
+    const text =
+
+`Bonjour Espace Optic Marrakech,
+
+Nom : ${name}
+
+Téléphone : ${phone}
+
+Demande :
+${message || "Je souhaite un conseil optique."}
+
+${fileText}
+
+---
+
+مرحباً Espace Optic Marrakech،
+
+الاسم : ${name}
+
+الهاتف : ${phone}
+
+الطلب :
+${message || "أرغب في الحصول على استشارة بصرية."}
+
+${fileText}`;
+
+
+    window.open(
+
+        "https://wa.me/"
+        +
+        WHATSAPP
+        +
+        "?text="
+        +
+        encodeURIComponent(text),
+
+        "_blank"
+
+    );
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMenu(){
+
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("open");
+
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+let currentLanguage = "fr";
+
+
+function toggleLanguage(){
+
+    currentLanguage =
+    currentLanguage === "fr"
+    ? "ar"
+    : "fr";
+
+
+    document
+    .querySelectorAll("[data-fr]")
+    .forEach(el=>{
+
+        el.style.display =
+        currentLanguage === "fr"
+        ? ""
+        : "none";
+
+    });
+
+
+    document
+    .querySelectorAll("[data-ar]")
+    .forEach(el=>{
+
+        el.style.display =
+        currentLanguage === "ar"
+        ? ""
+        : "none";
+
+    });
+
+
+    document
+    .getElementById("langButton")
+    .textContent =
+    currentLanguage === "fr"
+    ? "العربية"
+    : "Français";
+
+
+    document
+    .documentElement
+    .setAttribute(
+        "lang",
+        currentLanguage
+    );
+
+
+    document
+    .body
+    .classList
+    .toggle(
+        "ar",
+        currentLanguage === "ar"
+    );
+
+}
+
+
+/* =====================================================
+   QR CODE
+===================================================== */
+
+function generateQR(){
+
+    const container =
+    document.getElementById("qrcode");
+
+    if(!container) return;
+
+
+    container.innerHTML = "";
+
+
+    if(
+        typeof QRCode !== "undefined"
+    ){
+
+        new QRCode(
+            container,
+            {
+                text:MAP_URL,
+
+                width:190,
+
+                height:190,
+
+                colorDark:"#111111",
+
+                colorLight:"#ffffff",
+
+                correctLevel:
+                QRCode.CorrectLevel.H
+            }
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   MODAL CLICK OUTSIDE
+===================================================== */
+
+document
+.getElementById("modal")
+.addEventListener(
+    "click",
+    function(event){
+
+        if(
+            event.target === this
+        ){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CLOSE MOBILE MENU AFTER CLICK
+===================================================== */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            document
+            .getElementById("nav")
+            .classList
+            .remove("open");
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   START
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        generateQR();
+
+        renderProducts();
+
+        loadProducts();
+
+    }
+);
+
 </script>
+
+
 </body>
 </html>

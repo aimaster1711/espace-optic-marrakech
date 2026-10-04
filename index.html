@@ -11,6 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <style>
+
 :root{
 --orange:#ff6800;
 --gold:#f6a400;
@@ -19,65 +20,69 @@
 --light:#f7f4ef;
 --white:#fff;
 --gray:#777;
---green:#25d366
+--green:#25d366;
 }
 
 *{
 box-sizing:border-box;
 margin:0;
-padding:0
+padding:0;
 }
 
 html{
-scroll-behavior:smooth
+scroll-behavior:smooth;
 }
 
 body{
 font-family:Arial,Helvetica,sans-serif;
 background:#fff;
 color:#111;
-line-height:1.6
+line-height:1.6;
 }
 
 a{
 text-decoration:none;
-color:inherit
+color:inherit;
 }
 
 button,input,textarea,select{
-font:inherit
+font:inherit;
 }
 
 img{
 max-width:100%;
-display:block
+display:block;
 }
 
 .container{
 width:min(1180px,92%);
-margin:auto
+margin:auto;
 }
 
+
 /* TOP */
+
 .top{
 background:#050505;
-color:#fff;
+color:white;
 text-align:center;
 padding:8px;
-font-size:13px
+font-size:13px;
 }
 
 .top b{
-color:var(--orange)
+color:var(--orange);
 }
 
+
 /* HEADER */
+
 header{
 background:#080808;
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 5px 25px #0004
+box-shadow:0 5px 25px #0004;
 }
 
 .nav{
@@ -85,74 +90,74 @@ min-height:82px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px
+gap:20px;
 }
 
 .logo{
 width:190px;
 max-height:68px;
-object-fit:contain
+object-fit:contain;
 }
 
 .links{
 display:flex;
 align-items:center;
 gap:22px;
-color:#fff
+color:white;
 }
 
 .links a{
 font-size:14px;
-font-weight:bold
+font-weight:bold;
 }
 
 .links a:hover{
-color:var(--orange)
+color:var(--orange);
 }
 
 .menu{
 display:none;
 background:#222;
-color:#fff;
+color:white;
 border:0;
 border-radius:10px;
 padding:10px 14px;
-font-size:22px
+font-size:22px;
 }
 
 .lang{
 background:#222;
-color:#fff;
+color:white;
 border:1px solid #444;
 border-radius:20px;
 padding:8px 13px;
-cursor:pointer
+cursor:pointer;
 }
 
 .wa-small{
 background:var(--orange);
-color:#fff!important;
+color:white!important;
 padding:11px 16px;
-border-radius:25px
+border-radius:25px;
 }
 
+
 /* HERO */
+
 .hero{
 min-height:690px;
 display:flex;
 align-items:center;
-color:#fff;
+color:white;
 background:
 linear-gradient(90deg,#000e 0%,#000b 42%,#0004 100%),
-url("shop.jpg") center/cover no-repeat
+url("shop.jpg") center/cover no-repeat;
 }
 
 .hero-content{
 max-width:720px;
-padding:90px 0
+padding:90px 0;
 }
-
-/* لا يوجد لوغو كبير هنا */
 
 .badge{
 display:inline-block;
@@ -161,31 +166,31 @@ background:#ffffff12;
 padding:8px 15px;
 border-radius:30px;
 margin-bottom:22px;
-font-size:12px
+font-size:12px;
 }
 
 .hero h1{
 font-size:clamp(44px,7vw,76px);
 line-height:1;
 letter-spacing:-3px;
-margin-bottom:22px
+margin-bottom:22px;
 }
 
 .hero h1 span{
-color:var(--orange)
+color:var(--orange);
 }
 
 .hero p{
 font-size:18px;
 color:#eee;
 max-width:650px;
-margin-bottom:28px
+margin-bottom:28px;
 }
 
 .buttons{
 display:flex;
 flex-wrap:wrap;
-gap:10px
+gap:10px;
 }
 
 .btn{
@@ -196,76 +201,80 @@ border:0;
 cursor:pointer;
 padding:14px 20px;
 border-radius:12px;
-font-weight:bold
+font-weight:bold;
 }
 
 .orange{
 background:var(--orange);
-color:#fff
+color:white;
 }
 
 .white{
-background:#fff;
-color:#111
+background:white;
+color:#111;
 }
 
 .dark{
 background:#111;
-color:#fff
+color:white;
 }
 
 .btn:hover{
-transform:translateY(-2px)
+transform:translateY(-2px);
 }
 
+
 /* STATS */
+
 .stats{
 margin-top:-35px;
 position:relative;
-z-index:5
+z-index:5;
 }
 
 .stats-box{
-background:#fff;
+background:white;
 border-radius:22px;
 padding:22px;
-box-shadow:0 15px 50px #0002
+box-shadow:0 15px 50px #0002;
 }
 
 .stats-grid{
 display:grid;
-grid-template-columns:repeat(4,1fr)
+grid-template-columns:repeat(4,1fr);
 }
 
 .stat{
 padding:8px 20px;
-border-right:1px solid #eee
+border-right:1px solid #eee;
 }
 
 .stat:last-child{
-border:0
+border:0;
 }
 
 .stat strong{
-font-size:25px
+font-size:25px;
 }
 
 .stat small{
 display:block;
-color:var(--gray)
+color:var(--gray);
 }
 
+
 /* GENERAL */
+
 section{
-padding:90px 0
+padding:90px 0;
 }
 
 .light{
-background:var(--light)
+background:var(--light);
 }
 
 .section-head{
-margin-bottom:38px
+margin-bottom:38px;
 }
 
 .eyebrow{
@@ -274,39 +283,41 @@ font-size:12px;
 font-weight:bold;
 letter-spacing:2px;
 text-transform:uppercase;
-margin-bottom:8px
+margin-bottom:8px;
 }
 
 h2{
 font-size:clamp(34px,5vw,55px);
 line-height:1.05;
-letter-spacing:-2px
+letter-spacing:-2px;
 }
 
 .section-head p{
 color:var(--gray);
 max-width:550px;
-margin-top:12px
+margin-top:12px;
 }
 
+
 /* CATEGORIES */
+
 .categories{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:16px
+gap:16px;
 }
 
 .category{
 min-height:190px;
 border-radius:22px;
 background:#111;
-color:#fff;
+color:white;
 padding:25px;
 display:flex;
 flex-direction:column;
 justify-content:end;
 position:relative;
-overflow:hidden
+overflow:hidden;
 }
 
 .category:after{
@@ -317,37 +328,39 @@ border-radius:50%;
 background:var(--orange);
 position:absolute;
 right:-70px;
-top:-70px
+top:-70px;
 }
 
 .category h3,
 .category p{
 position:relative;
-z-index:2
+z-index:2;
 }
 
 .category h3{
-font-size:23px
+font-size:23px;
 }
 
 .category p{
 color:#ccc;
-font-size:13px
+font-size:13px;
 }
 
+
 /* PRODUCTS */
+
 .products{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px
+gap:20px;
 }
 
 .product{
-background:#fff;
+background:white;
 border:1px solid #e8e3dd;
 border-radius:22px;
 overflow:hidden;
-box-shadow:0 5px 20px #00000008
+box-shadow:0 5px 20px #00000008;
 }
 
 .product-img{
@@ -356,101 +369,105 @@ background:#f1efeb;
 display:flex;
 justify-content:center;
 align-items:center;
-overflow:hidden
+overflow:hidden;
 }
 
 .product-img img{
 width:100%;
 height:100%;
-object-fit:cover
+object-fit:cover;
 }
 
 .glasses{
 width:175px;
 height:72px;
 border:9px solid #111;
-border-radius:40px
+border-radius:40px;
 }
 
 .product-body{
-padding:20px
+padding:20px;
 }
 
 .cat{
 color:var(--orange);
 font-size:11px;
 font-weight:bold;
-text-transform:uppercase
+text-transform:uppercase;
 }
 
 .product h3{
-margin:5px 0
+margin:5px 0;
 }
 
 .desc{
 color:#777;
 font-size:13px;
-min-height:40px
+min-height:40px;
 }
 
 .price{
 font-size:23px;
 font-weight:bold;
-margin:12px 0
+margin:12px 0;
 }
 
 .actions{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:8px
+gap:8px;
 }
 
+
 /* ABOUT */
+
 .about{
 background:#0d0d0d;
-color:#fff
+color:white;
 }
 
 .about-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:55px;
-align-items:center
+align-items:center;
 }
 
 .about-img{
 min-height:500px;
 border-radius:28px;
-background:url("shop.jpg") center/cover no-repeat
+background:url("shop.jpg") center/cover no-repeat;
 }
 
 .about p{
 color:#ccc;
-margin:15px 0
+margin:15px 0;
 }
 
 .check{
 margin:13px 0;
 display:flex;
-gap:10px
+gap:10px;
 }
 
 .check b{
-color:var(--orange)
+color:var(--orange);
 }
 
+
 /* SERVICES */
+
 .services{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px
+gap:18px;
 }
 
 .service{
-background:#fff;
+background:white;
 border:1px solid #e8e3dd;
 border-radius:22px;
-padding:28px
+padding:28px;
 }
 
 .service-icon{
@@ -463,41 +480,43 @@ display:flex;
 justify-content:center;
 align-items:center;
 font-size:24px;
-margin-bottom:18px
+margin-bottom:18px;
 }
 
 .service p{
 color:#777;
-font-size:14px
+font-size:14px;
 }
 
+
 /* SHOP */
+
 .shop-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:25px
+gap:25px;
 }
 
 .shop-card{
-background:#fff;
+background:white;
 border:1px solid #e8e3dd;
 border-radius:25px;
-overflow:hidden
+overflow:hidden;
 }
 
 .shop-photo{
 height:370px;
-background:url("shop.jpg") center/cover no-repeat
+background:url("shop.jpg") center/cover no-repeat;
 }
 
 .shop-info{
-padding:28px
+padding:28px;
 }
 
 .info{
 display:flex;
 gap:13px;
-margin:17px 0
+margin:17px 0;
 }
 
 .icon{
@@ -509,68 +528,72 @@ background:#fff0e5;
 color:var(--orange);
 display:flex;
 align-items:center;
-justify-content:center
+justify-content:center;
 }
 
 .info small{
 display:block;
-color:#777
+color:#777;
 }
 
+
 /* QR */
+
 .qr{
 background:#0d0d0d;
-color:#fff;
+color:white;
 border-radius:25px;
 padding:38px;
 text-align:center;
 display:flex;
 flex-direction:column;
-justify-content:center
+justify-content:center;
 }
 
 .qr p{
-color:#aaa
+color:#aaa;
 }
 
 .qr-box{
 width:220px;
 height:220px;
-background:#fff;
+background:white;
 border-radius:15px;
 padding:15px;
 margin:25px auto;
 display:flex;
 align-items:center;
-justify-content:center
+justify-content:center;
 }
 
 #qrcode img{
 width:190px!important;
-height:190px!important
+height:190px!important;
 }
 
+
 /* ORDONNANCE */
+
 .order{
-background:#fff0e5
+background:#fff0e5;
 }
 
 .order-box{
-background:#fff;
+background:white;
 border-radius:28px;
 padding:40px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:45px
+gap:45px;
 }
 
 .order-box p{
-color:#777
+color:#777;
 }
 
 .form{
 display:grid;
-gap:12px
+gap:12px;
 }
 
 input,
@@ -579,65 +602,69 @@ width:100%;
 padding:14px;
 border:1px solid #ddd;
 border-radius:11px;
-outline:none
+outline:none;
 }
 
 textarea{
 min-height:120px;
-resize:vertical
+resize:vertical;
 }
 
 .note{
 font-size:12px;
-color:#777
+color:#777;
 }
 
+
 /* CONTACT */
+
 .contact-box{
 background:#111;
-color:#fff;
+color:white;
 border-radius:28px;
 padding:45px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:25px
+gap:25px;
 }
 
 .contact-box p{
 color:#aaa;
-margin-top:10px
+margin-top:10px;
 }
 
+
 /* FOOTER */
+
 footer{
 background:#050505;
-color:#fff;
-padding:55px 0 25px
+color:white;
+padding:55px 0 25px;
 }
 
 .footer-grid{
 display:grid;
 grid-template-columns:1.5fr 1fr 1fr;
-gap:40px
+gap:40px;
 }
 
 .footer-logo{
 width:230px;
 max-height:90px;
 object-fit:contain;
-margin-bottom:15px
+margin-bottom:15px;
 }
 
 footer p,
 footer a{
 color:#999;
 font-size:14px;
-margin:5px 0
+margin:5px 0;
 }
 
 footer a:hover{
-color:var(--orange)
+color:var(--orange);
 }
 
 .bottom{
@@ -645,10 +672,12 @@ border-top:1px solid #222;
 margin-top:35px;
 padding-top:18px;
 color:#666;
-font-size:12px
+font-size:12px;
 }
 
+
 /* WHATSAPP */
+
 .float-wa{
 position:fixed;
 right:18px;
@@ -657,16 +686,18 @@ width:60px;
 height:60px;
 border-radius:50%;
 background:var(--green);
-color:#fff;
+color:white;
 display:flex;
 align-items:center;
 justify-content:center;
 font-size:26px;
 z-index:2000;
-box-shadow:0 10px 30px #0004
+box-shadow:0 10px 30px #0004;
 }
 
+
 /* MODAL */
+
 .modal{
 position:fixed;
 inset:0;
@@ -675,19 +706,19 @@ z-index:5000;
 display:none;
 align-items:center;
 justify-content:center;
-padding:20px
+padding:20px;
 }
 
 .modal.show{
-display:flex
+display:flex;
 }
 
 .modal-box{
-background:#fff;
+background:white;
 width:min(500px,100%);
 border-radius:22px;
 padding:30px;
-position:relative
+position:relative;
 }
 
 .close{
@@ -698,10 +729,12 @@ border:0;
 width:38px;
 height:38px;
 border-radius:50%;
-cursor:pointer
+cursor:pointer;
 }
 
+
 /* TABLET */
+
 @media(max-width:900px){
 
 .links{
@@ -712,168 +745,207 @@ left:0;
 right:0;
 background:#080808;
 padding:20px;
-flex-direction:column
+flex-direction:column;
 }
 
 .links.open{
-display:flex
+display:flex;
 }
 
 .menu{
-display:block
+display:block;
 }
 
 .categories,
 .products{
-grid-template-columns:1fr 1fr
+grid-template-columns:1fr 1fr;
 }
 
 .about-grid,
 .shop-grid,
 .order-box{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .services{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .footer-grid{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .contact-box{
-display:block
+display:block;
 }
 
 .contact-box .buttons{
-margin-top:20px
+margin-top:20px;
 }
 
 }
+
 
 /* MOBILE */
+
 @media(max-width:560px){
 
 .logo{
-width:145px
+width:145px;
 }
 
 .hero{
 min-height:680px;
 background:
 linear-gradient(90deg,#000e,#0008),
-url("shop.jpg") center/cover no-repeat
+url("shop.jpg") center/cover no-repeat;
 }
 
 .hero h1{
-font-size:46px
+font-size:46px;
 }
 
 .hero p{
-font-size:16px
+font-size:16px;
 }
 
 .buttons{
-flex-direction:column
+flex-direction:column;
 }
 
 .btn{
-width:100%
+width:100%;
 }
 
 .stats-grid{
-grid-template-columns:1fr 1fr
+grid-template-columns:1fr 1fr;
 }
 
 .stat{
 border-bottom:1px solid #eee;
-border-right:1px solid #eee
+border-right:1px solid #eee;
 }
 
 .categories,
 .products{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 section{
-padding:70px 0
+padding:70px 0;
 }
 
 .about-img{
-min-height:360px
+min-height:360px;
 }
 
 .shop-photo{
-height:280px
+height:280px;
 }
 
 .order-box{
-padding:25px
+padding:25px;
 }
 
 .contact-box{
-padding:30px
+padding:30px;
 }
 
 .footer-logo{
-width:200px
+width:200px;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
+
 <!-- TOP -->
+
 <div class="top">
 <b>ESPACE OPTIC</b> • Marrakech • Hay Mabrouka • Opticien Optométriste
 </div>
 
+
 <!-- HEADER -->
+
 <header>
+
 <div class="container nav">
 
 <a href="#home">
-<img src="19756.jpg"
+<img
+src="19756.jpg"
 class="logo"
 alt="Espace Optic Marrakech">
 </a>
 
 <nav class="links" id="links">
 
-<a href="#catalogue" data-fr>Lunettes</a>
-<a href="#services" data-fr>Services</a>
-<a href="#boutique" data-fr>Boutique</a>
-<a href="#ordonnance" data-fr>Ordonnance</a>
-<a href="#contact" data-fr>Contact</a>
+<a href="#catalogue" data-fr>
+Lunettes
+</a>
 
-<a href="#catalogue" data-ar style="display:none">
+<a href="#services" data-fr>
+Services
+</a>
+
+<a href="#boutique" data-fr>
+Boutique
+</a>
+
+<a href="#ordonnance" data-fr>
+Ordonnance
+</a>
+
+<a href="#contact" data-fr>
+Contact
+</a>
+
+
+<a href="#catalogue"
+data-ar
+style="display:none">
 النظارات
 </a>
 
-<a href="#services" data-ar style="display:none">
+<a href="#services"
+data-ar
+style="display:none">
 الخدمات
 </a>
 
-<a href="#boutique" data-ar style="display:none">
+<a href="#boutique"
+data-ar
+style="display:none">
 المحل
 </a>
 
-<a href="#ordonnance" data-ar style="display:none">
+<a href="#ordonnance"
+data-ar
+style="display:none">
 الوصفة
 </a>
 
-<a href="#contact" data-ar style="display:none">
+<a href="#contact"
+data-ar
+style="display:none">
 اتصل بنا
 </a>
 
-<button class="lang" onclick="language()">
+
+<button
+class="lang"
+onclick="language()">
 العربية
 </button>
 
-<a class="wa-small"
+
+<a
+class="wa-small"
 href="https://wa.me/212631420754"
 target="_blank">
 WhatsApp
@@ -881,26 +953,37 @@ WhatsApp
 
 </nav>
 
-<button class="menu"
+
+<button
+class="menu"
 onclick="menu()">
 ☰
 </button>
 
 </div>
+
 </header>
 
+
+
 <!-- HERO -->
-<section class="hero" id="home">
+
+<section
+class="hero"
+id="home">
 
 <div class="container">
 
 <div class="hero-content">
 
+
 <div class="badge">
 MARRAKECH • HAY MABROUKA
 </div>
 
-<!-- تم حذف اللوغو الكبير من هنا -->
+
+<!-- اللوغو الكبير محيد نهائيا -->
+
 
 <h1>
 
@@ -908,7 +991,9 @@ MARRAKECH • HAY MABROUKA
 Votre vision.
 </span>
 
-<span data-ar style="display:none">
+<span
+data-ar
+style="display:none">
 رؤيتكم.
 </span>
 
@@ -918,11 +1003,14 @@ Votre vision.
 Notre expertise.
 </span>
 
-<span data-ar style="display:none">
+<span
+data-ar
+style="display:none">
 خبرتنا.
 </span>
 
 </h1>
+
 
 <p data-fr>
 Lunettes, lentilles, accessoires et conseil
@@ -930,25 +1018,36 @@ optique personnalisé dans un espace moderne
 et chaleureux à Marrakech.
 </p>
 
-<p data-ar style="display:none">
+
+<p
+data-ar
+style="display:none">
+
 نظارات، عدسات، إكسسوارات واستشارة بصرية
 شخصية في فضاء عصري ومريح بمراكش.
+
 </p>
+
 
 <div class="buttons">
 
-<a class="btn orange"
+<a
+class="btn orange"
 href="#catalogue">
 Découvrir nos lunettes →
 </a>
 
-<a class="btn white"
+
+<a
+class="btn white"
 href="https://wa.me/212631420754"
 target="_blank">
 WhatsApp
 </a>
 
-<a class="btn white"
+
+<a
+class="btn white"
 href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056"
 target="_blank">
 📍 Google Maps
@@ -957,44 +1056,60 @@ target="_blank">
 </div>
 
 </div>
+
 </div>
+
 </section>
 
+
+
 <!-- STATS -->
+
 <div class="container stats">
 
 <div class="stats-box">
 
 <div class="stats-grid">
 
+
 <div class="stat">
 <strong>Pro</strong>
 <small>Conseil optique</small>
 </div>
+
 
 <div class="stat">
 <strong>24/7</strong>
 <small>Demande en ligne</small>
 </div>
 
+
 <div class="stat">
 <strong>MAR</strong>
 <small>Livraison possible</small>
 </div>
+
 
 <div class="stat">
 <strong>✓</strong>
 <small>Service personnalisé</small>
 </div>
 
-</div>
-</div>
+
 </div>
 
+</div>
+
+</div>
+
+
+
 <!-- CATEGORIES -->
+
 <section>
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1013,36 +1128,50 @@ pour femme, homme et enfant.
 
 </div>
 
+
 <div class="categories">
+
 
 <div class="category">
 <h3>Femme</h3>
 <p>Élégance & caractère</p>
 </div>
 
+
 <div class="category">
 <h3>Homme</h3>
 <p>Style & précision</p>
 </div>
+
 
 <div class="category">
 <h3>Enfant</h3>
 <p>Confort & résistance</p>
 </div>
 
+
 <div class="category">
 <h3>Lentilles</h3>
 <p>Confort visuel</p>
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
+
+
 <!-- CATALOGUE -->
-<section class="light" id="catalogue">
+
+<section
+class="light"
+id="catalogue">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1061,19 +1190,29 @@ directement pour commander.
 
 </div>
 
-<div class="products"
+
+<div
+class="products"
 id="products">
 </div>
 
+
 </div>
+
 </section>
 
+
+
 <!-- ABOUT -->
+
 <section class="about">
 
 <div class="container about-grid">
 
-<div class="about-img"></div>
+
+<div class="about-img">
+</div>
+
 
 <div>
 
@@ -1085,40 +1224,52 @@ Espace Optic Marrakech
 Un espace pensé pour votre confort visuel.
 </h2>
 
+
 <p>
 Notre boutique vous accueille dans un environnement
-moderne et chaleureux pour vous accompagner dans
-le choix de vos lunettes.
+moderne et chaleureux pour vous accompagner
+dans le choix de vos lunettes.
 </p>
+
 
 <div class="check">
 <b>✓</b>
 Conseil optique personnalisé
 </div>
 
+
 <div class="check">
 <b>✓</b>
 Lunettes homme, femme et enfant
 </div>
+
 
 <div class="check">
 <b>✓</b>
 Lentilles de contact
 </div>
 
+
 <div class="check">
 <b>✓</b>
 Commande à distance
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
+
+
 <!-- SERVICES -->
+
 <section id="services">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1136,7 +1287,9 @@ Un accompagnement complet.
 
 </div>
 
+
 <div class="services">
+
 
 <div class="service">
 
@@ -1155,6 +1308,7 @@ et à vos besoins.
 
 </div>
 
+
 <div class="service">
 
 <div class="service-icon">
@@ -1171,6 +1325,7 @@ visuel quotidien.
 </p>
 
 </div>
+
 
 <div class="service">
 
@@ -1189,14 +1344,23 @@ directement sur WhatsApp.
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
+
+
 <!-- BOUTIQUE -->
-<section class="light" id="boutique">
+
+<section
+class="light"
+id="boutique">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1214,13 +1378,19 @@ Marrakech • Hay Mabrouka
 
 </div>
 
+
 <div class="shop-grid">
+
 
 <div class="shop-card">
 
-<div class="shop-photo"></div>
+
+<div class="shop-photo">
+</div>
+
 
 <div class="shop-info">
+
 
 <div class="info">
 
@@ -1240,7 +1410,9 @@ Résidence Tawhid A1 – Abwab Gueliz – Hay Mabrouka<br>
 </small>
 
 </div>
+
 </div>
+
 
 <div class="info">
 
@@ -1262,6 +1434,7 @@ Téléphone
 
 </div>
 
+
 <div class="info">
 
 <div class="icon">
@@ -1282,7 +1455,9 @@ espaceopticmarrakech@gmail.com
 
 </div>
 
-<a class="btn orange"
+
+<a
+class="btn orange"
 href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056"
 target="_blank">
 
@@ -1290,10 +1465,15 @@ target="_blank">
 
 </a>
 
-</div>
+
 </div>
 
+</div>
+
+
+
 <!-- QR -->
+
 <div class="qr">
 
 <div class="eyebrow">
@@ -1308,13 +1488,17 @@ Retrouvez-nous facilement.
 Scannez le QR code pour ouvrir Google Maps.
 </p>
 
+
 <div class="qr-box">
 
-<div id="qrcode"></div>
+<div id="qrcode">
+</div>
 
 </div>
 
-<a class="btn orange"
+
+<a
+class="btn orange"
 href="https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056"
 target="_blank">
 
@@ -1322,18 +1506,29 @@ Ouvrir Google Maps →
 
 </a>
 
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
+
+
 <!-- ORDONNANCE -->
-<section class="order" id="ordonnance">
+
+<section
+class="order"
+id="ordonnance">
 
 <div class="container">
 
+
 <div class="order-box">
+
 
 <div>
 
@@ -1350,75 +1545,95 @@ Remplissez le formulaire puis contactez-nous
 directement sur WhatsApp.
 </p>
 
+
 <div class="check">
 <b>✓</b>
 Simple depuis votre téléphone
 </div>
+
 
 <div class="check">
 <b>✓</b>
 Conseil personnalisé
 </div>
 
+
 <div class="check">
 <b>✓</b>
 Livraison possible
 </div>
 
+
 </div>
 
-<form class="form"
+
+
+<form
+class="form"
 onsubmit="sendOrder(event)">
+
 
 <input
 id="name"
 type="text"
 placeholder="Nom et prénom"
-required
->
+required>
+
 
 <input
 id="phone"
 type="tel"
 placeholder="Téléphone"
-required
->
+required>
+
 
 <textarea
 id="message"
 placeholder="Votre demande">
 </textarea>
 
+
 <input
 id="file"
 type="file"
-accept="image/*,.pdf"
->
+accept="image/*,.pdf">
+
 
 <div class="note">
 Vous pourrez joindre votre ordonnance directement
 dans WhatsApp après l'ouverture.
 </div>
 
-<button class="btn orange"
+
+<button
+class="btn orange"
 type="submit">
 
 Envoyer sur WhatsApp →
 
 </button>
 
+
 </form>
 
+
 </div>
+
 </div>
+
 </section>
 
+
+
 <!-- CONTACT -->
+
 <section id="contact">
 
 <div class="container">
 
+
 <div class="contact-box">
+
 
 <div>
 
@@ -1437,44 +1652,60 @@ Contactez Espace Optic Marrakech.
 
 </div>
 
+
 <div class="buttons">
 
-<a class="btn orange"
+
+<a
+class="btn orange"
 href="https://wa.me/212631420754"
 target="_blank">
 WhatsApp
 </a>
 
-<a class="btn white"
+
+<a
+class="btn white"
 href="tel:+212631420754">
 Appeler
 </a>
 
-<a class="btn white"
+
+<a
+class="btn white"
 href="mailto:espaceopticmarrakech@gmail.com">
 Email
 </a>
 
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
+
+
 <!-- FOOTER -->
+
 <footer>
 
 <div class="container">
 
+
 <div class="footer-grid">
+
 
 <div>
 
 <img
 src="19756.jpg"
 class="footer-logo"
-alt="Espace Optic Marrakech"
->
+alt="Espace Optic Marrakech">
+
 
 <p>
 Opticien Optométriste à Marrakech.<br>
@@ -1482,6 +1713,7 @@ Lunettes, lentilles, accessoires et conseil personnalisé.
 </p>
 
 </div>
+
 
 <div>
 
@@ -1515,6 +1747,7 @@ Ordonnance
 
 </div>
 
+
 <div>
 
 <h3>
@@ -1535,16 +1768,23 @@ Marrakech • Hay Mabrouka
 
 </div>
 
+
 </div>
+
 
 <div class="bottom">
 © 2026 Espace Optic Marrakech — Tous droits réservés.
 </div>
 
+
 </div>
+
 </footer>
 
-<!-- WHATSAPP -->
+
+
+<!-- FLOATING WHATSAPP -->
+
 <a
 class="float-wa"
 href="https://wa.me/212631420754"
@@ -1552,10 +1792,16 @@ target="_blank">
 ☎
 </a>
 
+
+
 <!-- MODAL -->
-<div class="modal" id="modal">
+
+<div
+class="modal"
+id="modal">
 
 <div class="modal-box">
+
 
 <button
 class="close"
@@ -1563,27 +1809,42 @@ onclick="closeModal()">
 ×
 </button>
 
+
 <div class="eyebrow">
 Espace Optic
 </div>
 
-<h2 id="modalTitle"></h2>
 
-<p id="modalText"></p>
+<h2 id="modalTitle">
+</h2>
+
+
+<p id="modalText">
+</p>
+
 
 <br>
+
 
 <button
 class="btn orange"
 id="modalOrder">
+
 Commander sur WhatsApp
+
 </button>
 
-</div>
+
 </div>
 
-<!-- JAVASCRIPT -->
+</div>
+
+
+
 <script>
+
+
+/* SUPABASE */
 
 const SUPABASE_URL =
 "https://snwsxlqfndrjyttmafts.supabase.co";
@@ -1597,6 +1858,7 @@ const WHATSAPP =
 const MAP_URL =
 "https://www.google.com/maps/search/?api=1&query=31.6508417,-8.0381056";
 
+
 const db =
 window.supabase
 ?
@@ -1606,6 +1868,7 @@ SUPABASE_KEY
 )
 :
 null;
+
 
 
 /* PRODUCTS */
@@ -1669,6 +1932,7 @@ image:""
 ];
 
 
+
 /* PRICE */
 
 function price(v){
@@ -1680,12 +1944,15 @@ return Number(v||0)
 }
 
 
+
 /* RENDER PRODUCTS */
 
 function renderProducts(){
 
 const box =
 document.getElementById("products");
+
+if(!box)return;
 
 box.innerHTML =
 products.map(p=>`
@@ -1704,36 +1971,46 @@ p.image
 
 </div>
 
+
 <div class="product-body">
 
 <div class="cat">
 ${p.category}
 </div>
 
+
 <h3>
 ${p.name}
 </h3>
+
 
 <p class="desc">
 ${p.description}
 </p>
 
+
 <div class="price">
 ${price(p.price)}
 </div>
+
 
 <div class="actions">
 
 <button
 class="btn dark"
 onclick="details(${p.id})">
+
 Détails
+
 </button>
+
 
 <button
 class="btn orange"
 onclick="orderProduct(${p.id})">
+
 Commander
+
 </button>
 
 </div>
@@ -1747,7 +2024,8 @@ Commander
 }
 
 
-/* SUPABASE */
+
+/* LOAD PRODUCTS */
 
 async function loadProducts(){
 
@@ -1771,6 +2049,7 @@ await db
 .eq("available",true)
 .order("id",{ascending:true});
 
+
 if(error){
 
 console.log(error);
@@ -1780,6 +2059,7 @@ renderProducts();
 return;
 
 }
+
 
 if(data && data.length){
 
@@ -1804,6 +2084,7 @@ image:p.image_url||""
 
 }
 
+
 renderProducts();
 
 }
@@ -1819,6 +2100,7 @@ renderProducts();
 }
 
 
+
 /* DETAILS */
 
 function details(id){
@@ -1830,9 +2112,11 @@ x=>Number(x.id)===Number(id)
 
 if(!p)return;
 
+
 document.getElementById(
 "modalTitle"
 ).textContent=p.name;
+
 
 document.getElementById(
 "modalText"
@@ -1841,10 +2125,12 @@ p.description+
 "\n\nPrix : "+
 price(p.price);
 
+
 document.getElementById(
 "modalOrder"
 ).onclick=
 ()=>whatsappProduct(p);
+
 
 document.getElementById(
 "modal"
@@ -1853,7 +2139,8 @@ document.getElementById(
 }
 
 
-/* CLOSE */
+
+/* CLOSE MODAL */
 
 function closeModal(){
 
@@ -1863,6 +2150,7 @@ document
 .remove("show");
 
 }
+
 
 
 /* ORDER */
@@ -1878,6 +2166,7 @@ if(p)
 whatsappProduct(p);
 
 }
+
 
 
 /* WHATSAPP PRODUCT */
@@ -1910,23 +2199,29 @@ encodeURIComponent(text),
 }
 
 
+
 /* ORDER FORM */
 
 function sendOrder(e){
 
 e.preventDefault();
 
+
 const name =
 document.getElementById("name").value;
+
 
 const phone =
 document.getElementById("phone").value;
 
+
 const message =
 document.getElementById("message").value;
 
+
 const file =
 document.getElementById("file").files[0];
+
 
 const fileText =
 file
@@ -1936,6 +2231,7 @@ file.name+
 "\nJe vais joindre le fichier dans WhatsApp."
 :
 "\nOrdonnance : aucune.";
+
 
 const text =
 `Bonjour Espace Optic Marrakech,
@@ -1948,6 +2244,7 @@ ${message || "Je souhaite une consultation / un conseil optique."}
 ${fileText}
 
 Merci.`;
+
 
 window.open(
 "https://wa.me/"
@@ -1963,7 +2260,8 @@ encodeURIComponent(text),
 }
 
 
-/* MENU */
+
+/* MOBILE MENU */
 
 function menu(){
 
@@ -1975,6 +2273,7 @@ document
 }
 
 
+
 /* LANGUAGE */
 
 let ar=false;
@@ -1983,12 +2282,14 @@ function language(){
 
 ar=!ar;
 
+
 document
 .querySelectorAll("[data-fr]")
 .forEach(
 x=>x.style.display=
 ar?"none":""
 );
+
 
 document
 .querySelectorAll("[data-ar]")
@@ -1997,12 +2298,14 @@ x=>x.style.display=
 ar?"":"none"
 );
 
+
 document.documentElement.lang =
 ar
 ?
 "ar"
 :
 "fr";
+
 
 document
 .getElementById("links")
@@ -2012,6 +2315,7 @@ document
 }
 
 
+
 /* QR */
 
 function makeQR(){
@@ -2019,13 +2323,16 @@ function makeQR(){
 const box =
 document.getElementById("qrcode");
 
+
 if(
 !box ||
 typeof QRCode==="undefined"
 )
 return;
 
+
 box.innerHTML="";
+
 
 new QRCode(
 box,
@@ -2041,6 +2348,7 @@ QRCode.CorrectLevel.H
 );
 
 }
+
 
 
 /* START */
